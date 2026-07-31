@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>录入跟进 · 广企通</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 客户经理</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+      <a href="manager-detail-wait.html" class="header-back show" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">录入跟进</div>
+        <div class="app-subtitle">华南智造科技 · 拜访跟进录入</div>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="card follow-form">
+      <div class="card-title">拜访跟进录入</div>
+
+      <div class="form-section">
+        <label class="form-label">客户名称</label>
+        <input type="text" class="form-input" value="华南智造科技有限公司" readonly>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">跟踪状态</label>
+        <select class="form-select" id="follow-status">
+          <option>待触达</option>
+          <option selected>已拜访</option>
+          <option>暂无意向</option>
+          <option>已签约</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">拜访类型</label>
+        <div class="chip-group" data-single data-summary="visitType">
+          <button type="button" class="option-chip active" data-value="首次拜访">首次拜访</button>
+          <button type="button" class="option-chip" data-value="回访跟进">回访跟进</button>
+          <button type="button" class="option-chip" data-value="铁三角协同">铁三角协同</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">企业规模</label>
+        <div class="chip-group" data-single data-summary="scale">
+          <button type="button" class="option-chip" data-value="50人以下">50人以下</button>
+          <button type="button" class="option-chip active" data-value="50-200人">50-200人</button>
+          <button type="button" class="option-chip" data-value="200-500人">200-500人</button>
+          <button type="button" class="option-chip" data-value="500人以上">500人以上</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">业务意向 <span class="form-label-hint">· 关注产品 · 可多选</span></label>
+        <div class="chip-group" data-summary="needs">
+          <button type="button" class="option-chip active" data-value="代发">代发</button>
+          <button type="button" class="option-chip active" data-value="薪福宝">薪福宝</button>
+          <button type="button" class="option-chip" data-value="企业网银">企业网银</button>
+          <button type="button" class="option-chip" data-value="银企直连">银企直连</button>
+          <button type="button" class="option-chip" data-value="授信咨询">授信咨询</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">客户反馈 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-summary="feedback">
+          <button type="button" class="option-chip active" data-value="考虑中">考虑中</button>
+          <button type="button" class="option-chip" data-value="意向明确">意向明确</button>
+          <button type="button" class="option-chip" data-value="需进一步演示">需进一步演示</button>
+          <button type="button" class="option-chip" data-value="价格敏感">价格敏感</button>
+          <button type="button" class="option-chip" data-value="竞品绑定">竞品绑定</button>
+          <button type="button" class="option-chip" data-value="暂无意向">暂无意向</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">已推介产品 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-summary="products">
+          <button type="button" class="option-chip active" data-value="薪福宝">薪福宝</button>
+          <button type="button" class="option-chip" data-value="代发">代发</button>
+          <button type="button" class="option-chip" data-value="企业网银">企业网银</button>
+          <button type="button" class="option-chip" data-value="银企直连">银企直连</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">下次跟进动作</label>
+        <div class="chip-group" data-single data-summary="nextAction">
+          <button type="button" class="option-chip active" data-value="安排路演">安排路演</button>
+          <button type="button" class="option-chip" data-value="产品演示">产品演示</button>
+          <button type="button" class="option-chip" data-value="意向确认">意向确认</button>
+          <button type="button" class="option-chip" data-value="例行回访">例行回访</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">下次跟进日期</label>
+        <input type="date" class="form-input" value="2026-07-02">
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">补充说明 <span class="form-label-hint">· 选填</span></label>
+        <textarea class="form-textarea" rows="2" data-follow-note="extra" placeholder="如有特殊情况，简要补充一句即可…"></textarea>
+      </div>
+
+      <div class="form-section demand-section demand-section--readonly">
+        <label class="form-label demand-toggle-label">
+          <input type="checkbox" class="demand-toggle" aria-label="填写客户需求（功能诉求）">
+          <span>客户需求（功能诉求） <span class="form-label-hint">· 选填</span></span>
+        </label>
+        <p class="demand-readonly-hint">勾选后可填写，涉及系统功能提升的诉求将自动归集至需求池</p>
+        <div class="demand-fields">
+          <p class="demand-pool-hint">涉及系统功能提升的诉求将<strong>自动归集至需求池</strong>，分行中支、总行可查阅并推动产品优化</p>
+          <label class="form-label form-label-sub">涉及产品/系统</label>
+          <div class="chip-group" data-summary="demandSystem">
+            <button type="button" class="option-chip" data-value="薪福宝">薪福宝</button>
+            <button type="button" class="option-chip" data-value="企业网银">企业网银</button>
+            <button type="button" class="option-chip" data-value="代发系统">代发系统</button>
+            <button type="button" class="option-chip" data-value="一户一表/CRM">一户一表/CRM</button>
+          </div>
+          <label class="form-label form-label-sub">功能诉求类型</label>
+          <div class="chip-group" data-summary="featureDemands">
+            <button type="button" class="option-chip" data-value="流程审批优化">流程审批优化</button>
+            <button type="button" class="option-chip" data-value="假期考勤联动">假期考勤联动</button>
+            <button type="button" class="option-chip" data-value="移动端体验">移动端体验</button>
+            <button type="button" class="option-chip" data-value="OA/HR系统对接">OA/HR系统对接</button>
+            <button type="button" class="option-chip" data-value="批量操作简化">批量操作简化</button>
+            <button type="button" class="option-chip" data-value="报表导出增强">报表导出增强</button>
+            <button type="button" class="option-chip" data-value="消息通知增强">消息通知增强</button>
+            <button type="button" class="option-chip" data-value="界面易用性">界面易用性</button>
+          </div>
+          <label class="form-label form-label-sub">诉求描述</label>
+          <textarea class="form-textarea form-textarea-sm" rows="2" data-follow-note="featureDemand" readonly placeholder="记录客户原话或具体使用场景，如「审批层级太多，希望按天数自动路由」…"></textarea>
+        </div>
+      </div>
+
+      <div class="summary-preview">
+        <div class="summary-preview-label">自动生成摘要</div>
+        <div id="follow-summary">首次拜访，企业规模 50-200 人；业务意向：代发、薪福宝；客户考虑中；已推介薪福宝；下次安排路演。</div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="button" onclick="alert('Demo：跟进记录已保存；功能诉求已同步至需求池')">保存并同步 CRM</button>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+  initOptionChips();
+  initDemandSection();
+  updateFollowSummary();
+  document.querySelectorAll('.follow-form [data-follow-note]').forEach(el => {
+    el.addEventListener('input', updateFollowSummary);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>路演资源配置 · 总行</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 总行</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+      <a href="hq.html" class="header-back show" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">路演资源配置</div>
+        <div class="app-subtitle">全行 · 协调科技/行领导资源</div>
+        <span class="role-tag">总行视角</span>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="tip-bar">分行完成零售等资源指派后，总行协调科技条线、必要时行领导参与，配置完成后反馈客户经理执行</div>
+
+    <div class="filter-bar">
+      <button class="filter-chip active" data-filter="all">全部</button>
+      <button class="filter-chip" data-filter="pending">待配置</button>
+      <button class="filter-chip" data-filter="done">已反馈</button>
+    </div>
+
+    <div data-filter-list>
+      <div class="card" style="padding:0 14px" data-status="pending">
+        <a class="list-item" href="hq-roadshow-config-detail.html">
+          <div class="list-content">
+            <div class="list-title">华南智造科技有限公司</div>
+            <div class="list-desc">广州分行 · 张经理 · 07-05 14:00 · 分行已配置</div>
+            <div class="list-meta">
+              <span class="tag tag-orange">待总行配置</span>
+              <span class="tag tag-blue">需科技条线</span>
+            </div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+
+      <div class="card" style="padding:0 14px" data-status="done">
+        <a class="list-item" href="manager-roadshow-plan.html">
+          <div class="list-content">
+            <div class="list-title">星辰传媒有限公司</div>
+            <div class="list-desc">广州分行 · 张经理 · 07-02 15:00 · 06-28 已反馈</div>
+            <div class="list-meta">
+              <span class="tag tag-green">已反馈执行</span>
+              <span class="tag tag-purple">科技王工</span>
+            </div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+
+      <div class="card" style="padding:0 14px" data-status="done">
+        <a class="list-item" href="manager-roadshow-plan-signed.html">
+          <div class="list-content">
+            <div class="list-title">绿源环保科技有限公司</div>
+            <div class="list-desc">广州分行 · 张经理 · 06-30 10:00 · 06-27 已反馈</div>
+            <div class="list-meta">
+              <span class="tag tag-green">已反馈执行</span>
+              <span class="tag tag-purple">科技王工</span>
+            </div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <p data-filter-empty hidden style="text-align:center;color:var(--text-muted);font-size:13px;padding:24px 0">暂无该状态的申请</p>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>initStandalonePage();</script>
+</body>
+</html>

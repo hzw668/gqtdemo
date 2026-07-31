@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>铁三角路演 · 广企通</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 客户经理</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+      <a href="manager-detail-signed.html" class="header-back show" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">铁三角路演</div>
+        <div class="app-subtitle">绿源环保科技 · 录入路演记录</div>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="card roadshow-form">
+      <div class="card-title">铁三角路演记录</div>
+      <p class="form-hint">点选预填内容快速组合，各栏可补充自定义说明</p>
+
+      <div class="form-section">
+        <label class="form-label">参与角色 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-roadshow="roles">
+          <button type="button" class="option-chip active" data-value="对公 · 我">对公 · 我</button>
+          <button type="button" class="option-chip active" data-value="零售 · 李经理">零售 · 李经理</button>
+          <button type="button" class="option-chip active" data-value="科技 · 王工">科技 · 王工</button>
+        </div>
+      </div>
+
+      <div class="form-section roadshow-role-block">
+        <label class="form-label form-label-role corp">对公营销产品 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-roadshow="corpProducts">
+          <button type="button" class="option-chip active" data-value="薪福宝">薪福宝</button>
+          <button type="button" class="option-chip active" data-value="企业网银">企业网银</button>
+          <button type="button" class="option-chip" data-value="银企直连">银企直连</button>
+          <button type="button" class="option-chip" data-value="资金监管">资金监管</button>
+          <button type="button" class="option-chip" data-value="红棉理财">红棉理财</button>
+          <button type="button" class="option-chip" data-value="授信配套">授信配套</button>
+        </div>
+        <textarea class="form-textarea form-textarea-sm" rows="2" data-roadshow-note="corpProducts" placeholder="对公侧补充说明，如重点演示模块、客户关注点…"></textarea>
+      </div>
+
+      <div class="form-section roadshow-role-block">
+        <label class="form-label form-label-role retail">零售营销产品 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-roadshow="retailProducts">
+          <button type="button" class="option-chip active" data-value="代发工资">代发工资</button>
+          <button type="button" class="option-chip" data-value="员工信用卡">员工信用卡</button>
+          <button type="button" class="option-chip" data-value="个人养老金">个人养老金</button>
+          <button type="button" class="option-chip" data-value="员工贷款">员工贷款</button>
+          <button type="button" class="option-chip" data-value="代发+理财组合">代发+理财组合</button>
+        </div>
+        <textarea class="form-textarea form-textarea-sm" rows="2" data-roadshow-note="retailProducts" placeholder="零售侧补充说明，如代发规模、员工权益诉求…"></textarea>
+      </div>
+
+      <div class="form-section roadshow-role-block">
+        <label class="form-label form-label-role tech">科技解答问题 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-roadshow="techTopics">
+          <button type="button" class="option-chip active" data-value="薪福宝部署与培训">薪福宝部署与培训</button>
+          <button type="button" class="option-chip active" data-value="API 对接方案">API 对接方案</button>
+          <button type="button" class="option-chip" data-value="数据安全合规">数据安全合规</button>
+          <button type="button" class="option-chip" data-value="系统迁移方案">系统迁移方案</button>
+          <button type="button" class="option-chip" data-value="与现有 HR/OA 对接">与现有 HR/OA 对接</button>
+          <button type="button" class="option-chip" data-value="代发接口联调">代发接口联调</button>
+        </div>
+        <textarea class="form-textarea form-textarea-sm" rows="2" data-roadshow-note="techTopics" placeholder="科技侧补充说明，如待确认事项、实施周期…"></textarea>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">客户现场反馈 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-roadshow="feedback">
+          <button type="button" class="option-chip active" data-value="考虑中">考虑中</button>
+          <button type="button" class="option-chip" data-value="意向明确">意向明确</button>
+          <button type="button" class="option-chip" data-value="需进一步演示">需进一步演示</button>
+          <button type="button" class="option-chip" data-value="价格敏感">价格敏感</button>
+          <button type="button" class="option-chip" data-value="要求优惠方案">要求优惠方案</button>
+          <button type="button" class="option-chip" data-value="待内部决策">待内部决策</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">转化结果</label>
+        <div class="chip-group" data-single data-roadshow="result">
+          <button type="button" class="option-chip active" data-value="待跟进">待跟进</button>
+          <button type="button" class="option-chip" data-value="已签约">已签约</button>
+          <button type="button" class="option-chip" data-value="需二次路演">需二次路演</button>
+          <button type="button" class="option-chip" data-value="暂无意向 · 需复盘">暂无意向 · 需复盘</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">下次跟进动作</label>
+        <div class="chip-group" data-single data-roadshow="nextAction">
+          <button type="button" class="option-chip active" data-value="推动首笔代发">推动首笔代发</button>
+          <button type="button" class="option-chip" data-value="薪福宝开通培训">薪福宝开通培训</button>
+          <button type="button" class="option-chip" data-value="安排二次路演">安排二次路演</button>
+          <button type="button" class="option-chip" data-value="报价方案跟进">报价方案跟进</button>
+          <button type="button" class="option-chip" data-value="复盘归档">复盘归档</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">整体补充说明 <span class="form-label-hint">· 选填</span></label>
+        <textarea class="form-textarea" rows="2" data-roadshow-note="extra" placeholder="其他需记录的情况，如参会人员、现场异议、约定事项…"></textarea>
+      </div>
+
+      <div class="summary-preview">
+        <div class="summary-preview-label">自动生成摘要（同步至一户一表）</div>
+        <div id="roadshow-summary">参与：对公 · 我、零售 · 李经理、科技 · 王工。<strong>对公</strong>：薪福宝、企业网银。<strong>零售</strong>：代发工资。<strong>科技</strong>：薪福宝部署与培训、API 对接方案。客户考虑中；转化：待跟进；下次推动首笔代发。</div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="button" onclick="alert('Demo：路演记录已同步至一户一表')">保存路演记录</button>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+  initOptionChips();
+  updateRoadshowSummary();
+  document.querySelectorAll('.roadshow-form [data-roadshow-note]').forEach(el => {
+    el.addEventListener('input', updateRoadshowSummary);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>配置路演资源 · 总行</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 总行</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+      <a href="hq-roadshow-config.html" class="header-back show" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">配置路演资源</div>
+        <div class="app-subtitle">华南智造科技 · 总行侧配置</div>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="card">
+      <div class="card-title">申请与分行配置</div>
+      <div class="field-row"><span class="field-label">客户</span><span class="field-value">华南智造科技有限公司</span></div>
+      <div class="field-row"><span class="field-label">机构/申请人</span><span class="field-value">广州分行 · 张经理</span></div>
+      <div class="field-row"><span class="field-label">路演时间</span><span class="field-value">2026-07-05 14:00</span></div>
+      <div class="field-row"><span class="field-label">分行已指派</span><span class="field-value">零售李经理 · 对公产品远程支持</span></div>
+      <div class="field-row"><span class="field-label">客户诉求</span><span class="field-value">HR 系统对接方案讲解</span></div>
+    </div>
+
+    <div class="card roadshow-config-form" data-config-form="hq">
+      <div class="card-title">总行资源配置</div>
+      <p class="form-hint">协调科技条线支持人员，必要时安排行领导参与；完成后系统将推送路演计划至客户经理</p>
+
+      <div class="form-section">
+        <label class="form-label">指派科技支持 <span class="form-label-hint">· 必填</span></label>
+        <select class="form-select" data-config-select="tech">
+          <option value="">请选择</option>
+          <option selected>王工 · 软件开发中心 · 薪福宝/API 对接</option>
+          <option>刘工 · 软件开发中心 · 系统迁移</option>
+          <option>远程支持 · 金科部值班</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">科技支持内容 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-config="techContent">
+          <button type="button" class="option-chip active" data-value="薪福宝现场演示">薪福宝现场演示</button>
+          <button type="button" class="option-chip active" data-value="API/HR 对接方案">API/HR 对接方案</button>
+          <button type="button" class="option-chip" data-value="数据安全合规说明">数据安全合规说明</button>
+          <button type="button" class="option-chip" data-value="实施周期评估">实施周期评估</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">行领导参与</label>
+        <div class="chip-group" data-single data-config="leadership">
+          <button type="button" class="option-chip active" data-value="无需行领导">无需行领导</button>
+          <button type="button" class="option-chip" data-value="公司部领导">公司部领导</button>
+          <button type="button" class="option-chip" data-value="分管行领导">分管行领导</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">确定最终路演时间</label>
+        <input type="datetime-local" class="form-input" data-config-datetime value="2026-07-05T14:00">
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">总行配置说明 <span class="form-label-hint">· 根据选项自动生成 · 可微调</span></label>
+        <textarea class="form-textarea" rows="3" data-config-note></textarea>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="button" onclick="alert('Demo：总行配置已完成\n\n路演计划已推送至张经理\n\n请客户经理按确定时间组织路演并录入记录')">确认配置 · 反馈客户经理</button>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+  initOptionChips();
+  initRoadshowConfigForm();
+</script>
+</body>
+</html>

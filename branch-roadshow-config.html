@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>路演资源配置 · 分行</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 分行</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+      <a href="branch.html" class="header-back show" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">路演资源配置</div>
+        <div class="app-subtitle">广州分行 · 协调零售/中支持资源</div>
+        <span class="role-tag">分行视角</span>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="tip-bar">客户经理提交路演申请后，分行指派零售协同人员、确认现场支持，再提交总行配置科技资源</div>
+
+    <div class="filter-bar">
+      <button class="filter-chip active" data-filter="all">全部</button>
+      <button class="filter-chip" data-filter="pending">待配置</button>
+      <button class="filter-chip" data-filter="done">已提交总行</button>
+    </div>
+
+    <div data-filter-list>
+      <div class="card" style="padding:0 14px" data-status="pending">
+        <a class="list-item" href="branch-roadshow-config-detail.html">
+          <div class="list-content">
+            <div class="list-title">华南智造科技有限公司</div>
+            <div class="list-desc">张经理申请 · 预约 07-05 14:00 · 06-29 提交</div>
+            <div class="list-meta">
+              <span class="tag tag-orange">待分行配置</span>
+              <span class="tag tag-purple">铁三角</span>
+            </div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+
+      <div class="card" style="padding:0 14px" data-status="done">
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">星辰传媒有限公司</div>
+            <div class="list-desc">张经理 · 07-02 15:00 · 06-27 已提交总行</div>
+            <div class="list-meta">
+              <span class="tag tag-blue">待总行配置</span>
+              <span class="tag tag-gray">零售李经理</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:0 14px" data-status="done">
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">宏达建设集团有限公司</div>
+            <div class="list-desc">李经理 · 07-08 10:00 · 06-25 配置完成</div>
+            <div class="list-meta">
+              <span class="tag tag-green">全流程完成</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p data-filter-empty hidden style="text-align:center;color:var(--text-muted);font-size:13px;padding:24px 0">暂无该状态的申请</p>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>initStandalonePage();</script>
+</body>
+</html>

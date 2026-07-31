@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>清单下发 · 广企通</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 客户经理</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+      <a href="manager-todo.html" class="header-back show" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">清单下发</div>
+        <div class="app-subtitle">张经理 · 分配至名下的一户一表任务</div>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div id="page-manager-roster-main">
+      <span class="roster-scope-tag">客户经理视角 · 我的清单</span>
+      <div class="tip-bar">点击批次查看客户明细 · 客户项可进入一户一表详情</div>
+      <div class="roster-policy-box manager">
+        <strong>您的职责：</strong>作为<strong>管护客户经理</strong>，负责清单客户在待办中的触达、拜访与转化推进。<br>
+        <strong>管户调整：</strong>如需改派，由分行/总行操作；调整后您将收到通知，系统保留调整留痕。
+      </div>
+
+      <div class="card">
+        <div class="roster-stat-row">
+          <div class="roster-stat"><div class="num">3</div><div class="lbl">接收批次</div></div>
+          <div class="roster-stat"><div class="num">12</div><div class="lbl">在管客户</div></div>
+          <div class="roster-stat"><div class="num">4</div><div class="lbl">待触达</div></div>
+        </div>
+      </div>
+
+      <div class="section-label">接收批次</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item" data-goto="page-manager-roster-park" data-title="天河园区批量" data-subtitle="批次明细 · 5 户">
+          <div class="list-content">
+            <div class="list-title">天河园区批量开户清单</div>
+            <div class="list-desc">06-18 分配 · 5 户至名下 · 待触达 2 · 已拜访 3</div>
+            <div class="list-meta"><span class="tag tag-purple">园区批量</span><span class="tag tag-orange">待跟进 2</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-manager-roster-new" data-title="新开户增量" data-subtitle="批次明细 · 2 户">
+          <div class="list-content">
+            <div class="list-title">6月新开户增量清单</div>
+            <div class="list-desc">持续注入 · 2 户至名下 · 华南智造、星辰传媒</div>
+            <div class="list-meta"><span class="tag tag-orange">增量注入</span><span class="tag tag-red">1 户逾期</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-manager-roster-stock" data-title="存量薪福宝" data-subtitle="批次明细 · 5 户">
+          <div class="list-content">
+            <div class="list-title">6月存量薪福宝清单（我的份额）</div>
+            <div class="list-desc">06-01 分配 · 5 户至名下 · 触达 100% · 活跃 3 户</div>
+            <div class="list-meta"><span class="tag tag-blue">存量清单</span><span class="tag tag-green">已完成触达</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 批次明细：天河园区批量 -->
+    <div class="sub-view" id="page-manager-roster-park">
+      <span class="roster-scope-tag">批次明细 · 我的客户</span>
+      <div class="card">
+        <div class="roster-batch-head">
+          <div>
+            <div class="roster-batch-title">天河园区批量开户清单</div>
+            <div class="roster-batch-meta">批次号 R202606-PARK-GZ-TJ · 06-18 14:30 分配至我</div>
+          </div>
+          <span class="tag tag-purple">园区批量</span>
+        </div>
+        <div class="roster-flow">
+          <span class="roster-flow-step done">总行下发</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">分行接收</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">06-18 分配至我</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step">触达 3/5</span>
+        </div>
+        <div class="field-row"><span class="field-label">管户人</span><span class="field-value">张经理（我）· 负责待办推进</span></div>
+        <div class="field-row"><span class="field-label">分配方式</span><span class="field-value">中支按网点归属自动分配</span></div>
+      </div>
+      <div class="section-label">本批次客户（5 户）</div>
+      <div class="card" style="padding:0 14px">
+        <a class="list-item" href="manager-detail-wait.html">
+          <div class="list-content">
+            <div class="list-title">华南智造科技有限公司</div>
+            <div class="list-desc">待触达 · 06-20 注入 · 计划跟进已逾期</div>
+            <div class="list-meta"><span class="tag tag-red">待触达</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-detail-wait.html">
+          <div class="list-content">
+            <div class="list-title">海珠物流有限公司</div>
+            <div class="list-desc">待触达 · 06-22 注入 · 计划本周拜访</div>
+            <div class="list-meta"><span class="tag tag-blue">待触达</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-detail-visit.html">
+          <div class="list-content">
+            <div class="list-title">星辰传媒有限公司</div>
+            <div class="list-desc">已拜访 · 06-26 首次跟进 · 待路演</div>
+            <div class="list-meta"><span class="tag tag-orange">已拜访</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-detail-visit.html">
+          <div class="list-content">
+            <div class="list-title">金鼎精密制造有限公司</div>
+            <div class="list-desc">已拜访 · 06-18 路演 · 待二次跟进</div>
+            <div class="list-meta"><span class="tag tag-orange">已拜访</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-detail-signed.html">
+          <div class="list-content">
+            <div class="list-title">绿源环保科技有限公司</div>
+            <div class="list-desc">已签约 · 薪福宝+代发 · 明日路演 · 代发待激活</div>
+            <div class="list-meta"><span class="tag tag-blue">已签约</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 批次明细：新开户增量 -->
+    <div class="sub-view" id="page-manager-roster-new">
+      <span class="roster-scope-tag">批次明细 · 我的客户</span>
+      <div class="card">
+        <div class="roster-batch-head">
+          <div>
+            <div class="roster-batch-title">6月新开户增量清单</div>
+            <div class="roster-batch-meta">批次号 R202606-NEW · 持续注入 · 累计 2 户至我</div>
+          </div>
+          <span class="tag tag-orange">增量注入</span>
+        </div>
+        <div class="roster-flow">
+          <span class="roster-flow-step done">开户识别</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">CRM 自动注入</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">分行分配至我</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step">触达 1/2</span>
+        </div>
+        <div class="field-row"><span class="field-label">识别来源</span><span class="field-value">开户系统 · 广企通条件自动识别</span></div>
+        <div class="field-row"><span class="field-label">分配时效</span><span class="field-value">T+1 分配至管护客户经理</span></div>
+      </div>
+      <div class="section-label">本批次客户（2 户）</div>
+      <div class="card" style="padding:0 14px">
+        <a class="list-item" href="manager-detail-wait.html">
+          <div class="list-content">
+            <div class="list-title">华南智造科技有限公司</div>
+            <div class="list-desc">06-20 注入 · 待首次拜访 · 计划跟进已逾期</div>
+            <div class="list-meta"><span class="tag tag-red">待触达</span><span class="tag tag-gray">06-20</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-detail-visit.html">
+          <div class="list-content">
+            <div class="list-title">星辰传媒有限公司</div>
+            <div class="list-desc">06-24 注入 · 已首次拜访 · 周五路演</div>
+            <div class="list-meta"><span class="tag tag-orange">已拜访</span><span class="tag tag-gray">06-24</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 批次明细：存量薪福宝 -->
+    <div class="sub-view" id="page-manager-roster-stock">
+      <span class="roster-scope-tag">批次明细 · 我的客户</span>
+      <div class="card">
+        <div class="roster-batch-head">
+          <div>
+            <div class="roster-batch-title">6月存量薪福宝清单（我的份额）</div>
+            <div class="roster-batch-meta">批次号 R202606-STOCK-TJ · 06-01 分配 · 5 户至我</div>
+          </div>
+          <span class="tag tag-blue">存量清单</span>
+        </div>
+        <div class="roster-flow">
+          <span class="roster-flow-step done">总行推送</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">分行接收</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">06-01 分配至我</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">触达 5/5</span>
+        </div>
+        <div class="field-row"><span class="field-label">清单来源</span><span class="field-value">ECIF · 已开通薪福宝存量客户</span></div>
+        <div class="field-row"><span class="field-label">活跃户</span><span class="field-value">3 户 · 2 户预警待回访</span></div>
+      </div>
+      <div class="section-label">本批次客户（5 户）</div>
+      <div class="card" style="padding:0 14px">
+        <a class="list-item" href="manager-detail-active.html">
+          <div class="list-content">
+            <div class="list-title">粤食餐饮管理有限公司</div>
+            <div class="list-desc">薪福宝 2 模块 · 代发 86 笔/月 · 活跃</div>
+            <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-detail-active.html">
+          <div class="list-content">
+            <div class="list-title">宏达建设集团有限公司</div>
+            <div class="list-desc">代发活跃 · 薪福宝 4 模块 · 上次跟进 06-18</div>
+            <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-detail-active.html">
+          <div class="list-content">
+            <div class="list-title">锦程商旅服务有限公司</div>
+            <div class="list-desc">薪福宝 5 模块 · 代发 120 笔/月 · 网银活跃</div>
+            <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-detail-warn.html">
+          <div class="list-content">
+            <div class="list-title">美家家居有限公司</div>
+            <div class="list-desc">网银 30 天未登录 · 代发较上月下降</div>
+            <div class="list-meta"><span class="tag tag-red">预警</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-detail-warn.html">
+          <div class="list-content">
+            <div class="list-title">优鲜连锁超市有限公司</div>
+            <div class="list-desc">薪福宝 15 天未登录 · 代发笔数骤降</div>
+            <div class="list-meta"><span class="tag tag-red">预警</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <nav class="tab-bar tab-bar-links">
+    <a class="tab-item active" href="manager-todo.html"><span class="icon">🏠</span>待办</a>
+    <a class="tab-item" href="manager-customers.html"><span class="icon">👥</span>客户</a>
+    <a class="tab-item" href="manager-follow-log.html"><span class="icon">✏️</span>跟进</a>
+    <a class="tab-item has-badge" href="manager-messages.html"><span class="dot"></span><span class="icon">🔔</span>消息</a>
+  </nav>
+</div>
+<script src="common.js"></script>
+<script>
+  initStandaloneNav({
+    mainViewId: 'page-manager-roster-main',
+    backHref: 'manager-todo.html',
+    defaultTitle: '清单下发',
+    defaultSubtitle: '张经理 · 分配至名下的一户一表任务'
+  });
+</script>
+</body>
+</html>

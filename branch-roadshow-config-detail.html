@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>配置路演资源 · 分行</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 分行</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+      <a href="branch-roadshow-config.html" class="header-back show" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">配置路演资源</div>
+        <div class="app-subtitle">华南智造科技 · 分行侧配置</div>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="card">
+      <div class="card-title">客户经理申请信息</div>
+      <div class="field-row"><span class="field-label">客户</span><span class="field-value">华南智造科技有限公司</span></div>
+      <div class="field-row"><span class="field-label">申请人</span><span class="field-value">张经理 · 天河支行</span></div>
+      <div class="field-row"><span class="field-label">预约时间</span><span class="field-value">2026-07-05 14:00</span></div>
+      <div class="field-row"><span class="field-label">路演形式</span><span class="field-value">上门现场 · 科韵路 88 号</span></div>
+      <div class="field-row"><span class="field-label">期望协同</span><span class="field-value">零售、科技、对公产品专家</span></div>
+      <div class="field-row"><span class="field-label">重点推介</span><span class="field-value">薪福宝、代发工资</span></div>
+    </div>
+
+    <div class="card roadshow-config-form" data-config-form="branch">
+      <div class="card-title">分行资源配置</div>
+      <p class="form-hint">指派零售协同人员，确认是否需要中支/行领导支持，配置完成后提交总行协调科技资源</p>
+
+      <div class="form-section">
+        <label class="form-label">确定路演时间</label>
+        <input type="datetime-local" class="form-input" data-config-datetime value="2026-07-05T14:00">
+        <p class="form-hint" style="margin-top:6px">如与客户协商有调整，请在此修正后同步申请人</p>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">指派零售客户经理 <span class="form-label-hint">· 必填</span></label>
+        <select class="form-select" data-config-select="retail">
+          <option value="">请选择</option>
+          <option selected>李经理 · 天河支行 · 代发专长</option>
+          <option>陈经理 · 越秀支行</option>
+          <option>王经理 · 白云支行</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">对公产品支持</label>
+        <div class="chip-group" data-single data-config="corpSupport">
+          <button type="button" class="option-chip active" data-value="无需额外">无需额外</button>
+          <button type="button" class="option-chip" data-value="产品专家到场">产品专家到场</button>
+          <button type="button" class="option-chip" data-value="远程支持">远程支持</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">中支/行领导支持</label>
+        <div class="chip-group" data-single data-config="leadership">
+          <button type="button" class="option-chip active" data-value="无需行领导">无需行领导</button>
+          <button type="button" class="option-chip" data-value="中支领导带队">中支领导带队</button>
+          <button type="button" class="option-chip" data-value="分行领导带队">分行领导带队</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">现场支持事项 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-config="onsite">
+          <button type="button" class="option-chip active" data-value="代发方案讲解">代发方案讲解</button>
+          <button type="button" class="option-chip active" data-value="薪福宝演示协助">薪福宝演示协助</button>
+          <button type="button" class="option-chip" data-value="会议室协调">会议室协调</button>
+          <button type="button" class="option-chip" data-value="物料准备">物料准备</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">分行配置说明 <span class="form-label-hint">· 根据选项自动生成 · 可微调</span></label>
+        <textarea class="form-textarea" rows="3" data-config-note></textarea>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="button" onclick="alert('Demo：分行配置已保存\n\n已提交总行协调科技条线资源\n\n配置全部完成后将推送消息至张经理')">保存并提交总行配置</button>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+  initOptionChips();
+  initRoadshowConfigForm();
+</script>
+</body>
+</html>

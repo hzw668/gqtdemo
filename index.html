@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>广企通 · 业务工作台 Demo 入口</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+  <div class="portal-body">
+    <div class="portal-logo">
+      <h1>广企通 业务工作台</h1>
+      <p>CRM 移动端 H5 交互 Demo · 分屏可演示 · 蓝色主题</p>
+    </div>
+
+    <div class="portal-section">
+      <div class="portal-section-title">角色入口 · 完整工作台</div>
+      <div class="portal-section-desc">单页内 Tab 切换 + 下钻，适合连贯演示全流程</div>
+      <div class="demo-cards">
+        <a class="demo-card" href="hq.html">
+          <div class="demo-card-icon">🏢</div>
+          <div>
+            <h3>总行视角 · 经营看板</h3>
+            <p>经营看板 · 全行客户 · 机构督导 · 清单下发 · 需求池</p>
+          </div>
+          <span class="arrow">›</span>
+        </a>
+        <a class="demo-card" href="branch.html">
+          <div class="demo-card-icon">🏛️</div>
+          <div>
+            <h3>分行 / 中支视角</h3>
+            <p>机构概览 · 客户清单 · 清单下发 · 进度督导 · 预警协调</p>
+          </div>
+          <span class="arrow">›</span>
+        </a>
+        <a class="demo-card highlight" href="manager.html">
+          <div class="demo-card-icon">👤</div>
+          <div>
+            <h3>客户经理 · 完整交互版</h3>
+            <p>待办分类 → 客户清单 → 详情 → 录入，单页全链路</p>
+          </div>
+          <span class="arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="portal-section">
+      <div class="portal-section-title">客户经理 · 分屏演示</div>
+      <div class="portal-section-desc">每个页面独立打开，讲解时可逐屏切换，不折损细节</div>
+
+      <div class="portal-section-desc" style="margin-top:14px;margin-bottom:8px">① 待办模块</div>
+      <div class="demo-grid">
+        <a class="demo-tile highlight" href="manager-todo.html">待办首页<small>4 类事项分类入口</small></a>
+        <a class="demo-tile" href="manager-todo-visit.html">待触达拜访<small>2 户 · 点击进入明细</small></a>
+        <a class="demo-tile" href="manager-todo-warn.html">预警回访<small>2 户 · 活跃度下降</small></a>
+        <a class="demo-tile" href="manager-todo-roadshow.html">铁三角路演<small>2 场 · 协同营销</small></a>
+        <a class="demo-tile" href="manager-todo-grow.html">模块深度提升<small>2 户 · 推广未开通模块</small></a>
+      </div>
+
+      <div class="portal-section-desc" style="margin-top:14px;margin-bottom:8px">② 客户模块</div>
+      <div class="demo-grid">
+        <a class="demo-tile highlight" href="manager-customers.html">我的客户<small>12 户 · 状态筛选</small></a>
+        <a class="demo-tile" href="manager-detail-wait.html">未触达详情<small>华南智造 · 无签约回流</small></a>
+        <a class="demo-tile" href="manager-detail-active.html">活跃客户详情<small>粤食餐饮 · 产品使用回流</small></a>
+        <a class="demo-tile" href="manager-detail-warn.html">预警客户详情<small>美家家居 · 网银停用</small></a>
+        <a class="demo-tile" href="manager-detail-signed.html">已签约详情<small>绿源环保 · 待激活代发</small></a>
+        <a class="demo-tile" href="manager-detail-visit.html">已拜访详情<small>星辰传媒 · 待意向确认</small></a>
+        <a class="demo-tile" href="manager-detail-none.html">暂无意向详情<small>恒通贸易 · 已复盘</small></a>
+      </div>
+
+      <div class="portal-section-desc" style="margin-top:14px;margin-bottom:8px">③ 路演申请与执行</div>
+      <div class="demo-grid">
+        <a class="demo-tile highlight" href="manager-roadshow-apply.html">申请路演<small>选客户 · 预约时间 · 录入诉求</small></a>
+        <a class="demo-tile" href="manager-roadshow-apply-list.html">我的路演申请<small>待配置 / 待执行 / 已完成</small></a>
+        <a class="demo-tile" href="manager-roadshow-plan.html">路演计划确认<small>分行/总行配置反馈 · 按计划执行</small></a>
+        <a class="demo-tile" href="manager-roadshow.html">铁三角路演录入<small>路演完成后 · 模板勾选</small></a>
+      </div>
+
+      <div class="portal-section-desc" style="margin-top:14px;margin-bottom:8px">④ 录入与消息</div>
+      <div class="demo-grid">
+        <a class="demo-tile" href="manager-roster.html">清单下发<small>管户清单 · 待办推进</small></a>
+        <a class="demo-tile highlight" href="manager-follow.html">拜访跟进录入<small>业务意向 + 功能诉求 · 同步需求池</small></a>
+        <a class="demo-tile" href="manager-follow-log.html">跟进记录汇总<small>时间线 · 历史录入</small></a>
+        <a class="demo-tile" href="manager-messages.html">消息通知<small>授信/督导/路演计划</small></a>
+      </div>
+
+      <div class="portal-section-desc" style="margin-top:14px;margin-bottom:8px">⑤ 分行 / 总行 · 路演资源配置</div>
+      <div class="demo-grid">
+        <a class="demo-tile" href="branch-roadshow-config.html">分行配置资源<small>指派零售 · 中支支持</small></a>
+        <a class="demo-tile" href="hq-roadshow-config.html">总行配置资源<small>协调科技 · 行领导</small></a>
+      </div>
+    </div>
+
+    <p class="portal-note">Demo 演示数据 · 基于广企通一户一表业务材料设计<br>2026年6月 · 仅供方案展示</p>
+  </div>
+</body>
+</html>

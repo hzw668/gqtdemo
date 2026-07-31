@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>申请路演 · 广企通</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 客户经理</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+        <a href="manager-roadshow-apply-list.html" class="header-back show" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">申请路演</div>
+        <div class="app-subtitle">铁三角协同 · 提交后待分行/总行配置资源</div>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="roster-flow">
+      <span class="roster-flow-step done">① 客户经理申请</span>
+      <span class="roster-flow-arrow">→</span>
+      <span class="roster-flow-step">② 分行配置</span>
+      <span class="roster-flow-arrow">→</span>
+      <span class="roster-flow-step">③ 总行配置</span>
+      <span class="roster-flow-arrow">→</span>
+      <span class="roster-flow-step">④ 反馈执行</span>
+    </div>
+
+    <div class="card roadshow-apply-form">
+      <div class="card-title">路演申请单</div>
+      <p class="form-hint">填写客户预约时间与路演诉求，提交后由分行协调零售条线、总行协调科技/行领导等资源</p>
+
+      <div class="form-section">
+        <label class="form-label">选择客户 <span class="form-label-hint">· 必填</span></label>
+        <select class="form-select" id="apply-customer" data-apply="customer">
+          <option value="">请选择客户</option>
+          <option value="华南智造科技有限公司" selected>华南智造科技有限公司 · 待触达</option>
+          <option value="星辰传媒有限公司">星辰传媒有限公司 · 已拜访</option>
+          <option value="海珠物流有限公司">海珠物流有限公司 · 待触达</option>
+          <option value="粤食餐饮管理有限公司">粤食餐饮管理有限公司 · 活跃使用</option>
+        </select>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">客户预约路演时间 <span class="form-label-hint">· 必填</span></label>
+        <input type="datetime-local" class="form-input" id="apply-datetime" data-apply="datetime" value="2026-07-05T14:00">
+        <p class="form-hint" style="margin-top:6px">以客户可接受的时间为准，分行/总行将根据此时间协调参会人员</p>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">路演形式</label>
+        <div class="chip-group" data-single data-apply="format">
+          <button type="button" class="option-chip active" data-value="上门现场">上门现场</button>
+          <button type="button" class="option-chip" data-value="支行会议室">支行会议室</button>
+          <button type="button" class="option-chip" data-value="线上远程">线上远程</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">期望协同条线 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-apply="lines">
+          <button type="button" class="option-chip active" data-value="零售条线">零售条线</button>
+          <button type="button" class="option-chip active" data-value="科技条线">科技条线</button>
+          <button type="button" class="option-chip" data-value="行领导带队">行领导带队</button>
+          <button type="button" class="option-chip active" data-value="对公产品专家">对公产品专家</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">重点推介产品 <span class="form-label-hint">· 可多选</span></label>
+        <div class="chip-group" data-apply="products">
+          <button type="button" class="option-chip active" data-value="薪福宝">薪福宝</button>
+          <button type="button" class="option-chip active" data-value="代发工资">代发工资</button>
+          <button type="button" class="option-chip" data-value="企业网银">企业网银</button>
+          <button type="button" class="option-chip" data-value="授信配套">授信配套</button>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">路演地点 / 客户地址</label>
+        <input type="text" class="form-input" data-apply="location" value="广州市天河区科韵路 88 号华南智造园区 A 栋">
+      </div>
+
+      <div class="form-section">
+        <label class="form-label">其他要求 <span class="form-label-hint">· 选填</span></label>
+        <textarea class="form-textarea" rows="3" data-apply-note="extra" placeholder="如需特定演示模块、客户参会人员、竞品情况等…">客户为园区批量开户，希望铁三角联合推介薪福宝+代发；需科技讲解与现有 HR 系统对接方案；预计客户财务总监、人事经理参会。</textarea>
+      </div>
+
+      <div class="summary-preview">
+        <div class="summary-preview-label">申请摘要（同步至分行/总行待办）</div>
+        <div id="apply-summary">客户华南智造科技有限公司；预约 2026-07-05 14:00 上门现场路演；协同零售条线、科技条线、对公产品专家；重点推介薪福宝、代发工资。</div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" type="button" id="btn-submit-apply">提交路演申请</button>
+    <a class="btn btn-outline" href="manager-roadshow-apply-list.html" style="margin-top:8px">查看我的申请</a>
+  </div>
+</div>
+<script src="common.js"></script>
+<script>
+  initOptionChips();
+  updateRoadshowApplySummary();
+  document.querySelectorAll('.roadshow-apply-form [data-apply], .roadshow-apply-form [data-apply-note]').forEach(el => {
+    el.addEventListener('change', updateRoadshowApplySummary);
+    el.addEventListener('input', updateRoadshowApplySummary);
+  });
+  document.getElementById('btn-submit-apply').addEventListener('click', () => {
+    const customer = document.getElementById('apply-customer').value;
+    if (!customer) {
+      alert('请选择客户');
+      return;
+    }
+    alert('Demo：路演申请已提交\n\n状态：待分行配置资源\n\n分行/总行配置完成后将通过消息通知您，请按计划执行路演并录入记录。');
+    window.location.href = 'manager-roadshow-apply-list.html';
+  });
+</script>
+</body>
+</html>

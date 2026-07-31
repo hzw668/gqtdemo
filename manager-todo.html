@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>待办 · 广企通 业务工作台</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar">
+    <span>9:41</span>
+    <span>广信 CRM · 客户经理</span>
+    <span>100%</span>
+  </div>
+
+  <header class="app-header">
+    <div class="header-row">
+      <div class="header-title-wrap">
+        <div class="app-title">广企通 业务工作台</div>
+        <div class="app-subtitle">张经理 · 广州天河支行 · 对公客户经理</div>
+        <span class="role-tag">客户经理视角</span>
+      </div>
+      <span class="header-badge">12户</span>
+    </div>
+    <div class="search-box">
+      <span>🔍</span>
+      <input type="text" placeholder="搜索我的客户…">
+    </div>
+  </header>
+
+  <div class="app-body" data-todo-home>
+    <div class="page-flow-hint" style="margin-bottom:12px"><strong>完整交互版</strong> · 分屏演示请从 <a href="index.html" style="color:var(--blue-700)">Demo 入口</a> 进入各独立页面</div>
+    <div class="tip-bar">今日待办 8 项 · 选择类型进入 · 查看明细后再录入</div>
+
+    <div class="todo-categories">
+      <div class="todo-cat-card" data-todo-type="visit" role="button" tabindex="0">
+        <div class="todo-cat-icon">📌</div>
+        <div class="todo-cat-title">待触达拜访</div>
+        <div class="todo-cat-desc">新开户客户首次拜访</div>
+        <span class="todo-cat-count">2 户</span>
+      </div>
+      <div class="todo-cat-card warn" data-todo-type="warn" role="button" tabindex="0">
+        <div class="todo-cat-icon">⚠️</div>
+        <div class="todo-cat-title">预警回访</div>
+        <div class="todo-cat-desc">活跃度下降、跟进超时</div>
+        <span class="todo-cat-count">2 户</span>
+      </div>
+      <div class="todo-cat-card purple" data-todo-type="roadshow" role="button" tabindex="0">
+        <div class="todo-cat-icon">🎤</div>
+        <div class="todo-cat-title">铁三角路演</div>
+        <div class="todo-cat-desc">协同路演、记录营销情况</div>
+        <span class="todo-cat-count">2 场</span>
+      </div>
+      <div class="todo-cat-card" data-todo-type="grow" role="button" tabindex="0">
+        <div class="todo-cat-icon">📈</div>
+        <div class="todo-cat-title">模块深度提升</div>
+        <div class="todo-cat-desc">推广未开通模块、提升使用深度</div>
+        <span class="todo-cat-count">2 户</span>
+      </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <a class="list-item" href="manager-roster.html" style="padding:12px 0">
+          <div class="list-icon">📋</div>
+          <div class="list-content">
+            <div class="list-title">清单下发情况</div>
+            <div class="list-desc">3 个批次 · 12 户在管 · 4 户待触达</div>
+            <div class="list-meta"><span class="tag tag-blue">我的清单</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+        <a class="list-item" href="manager-roadshow-apply-list.html?from=todo" style="padding:12px 0;border-top:1px solid var(--border)">
+          <div class="list-icon" style="background:var(--purple-bg)">🎤</div>
+          <div class="list-content">
+            <div class="list-title">路演申请与执行</div>
+            <div class="list-desc">1 单待配置 · 2 单待执行 · 可申请铁三角路演</div>
+            <div class="list-meta"><span class="tag tag-purple">路演管理</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+
+      <div class="todo-detail-panel" data-todo-panel hidden>
+      <div data-todo-list="visit" hidden>
+        <div class="todo-action-hint"><strong>待触达拜访：</strong>完成首次拜访，录入客户需求与跟进计划。</div>
+        <div class="card" style="padding:0 14px">
+          <a class="list-item" href="manager-detail-wait.html">
+            <div class="list-content">
+              <div class="list-title">华南智造科技有限公司</div>
+              <div class="list-desc">新开户 · 06-20 · 计划今日 14:00 · 已逾期 3 天</div>
+              <div class="list-meta"><span class="tag tag-blue">未触达</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </a>
+        </div>
+        <div class="card" style="padding:0 14px">
+          <a class="list-item" href="manager-detail-wait.html">
+            <div class="list-content">
+              <div class="list-title">海珠物流有限公司</div>
+              <div class="list-desc">新开户 · 06-22 · 计划本周拜访 · 尚未首次触达</div>
+              <div class="list-meta"><span class="tag tag-blue">未触达</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </a>
+        </div>
+      </div>
+      <div data-todo-list="warn" hidden>
+        <div class="todo-action-hint"><strong>预警回访：</strong>回访预警客户，了解原因并录入跟进记录。</div>
+        <div class="card" style="padding:0 14px">
+          <a class="list-item" href="manager-detail-warn.html">
+            <div class="list-content">
+              <div class="list-title">美家家居有限公司</div>
+              <div class="list-desc">企业网银 30 天未登录 · 代发较上月下降 · 上次跟进 05-28</div>
+              <div class="list-meta"><span class="tag tag-red">预警</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </a>
+        </div>
+        <div class="card" style="padding:0 14px">
+          <a class="list-item" href="manager-detail-warn.html">
+            <div class="list-content">
+              <div class="list-title">优鲜连锁超市有限公司</div>
+              <div class="list-desc">薪福宝 15 天未登录 · 代发笔数骤降 · 上次跟进 06-05</div>
+              <div class="list-meta"><span class="tag tag-red">预警</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </a>
+        </div>
+      </div>
+      <div data-todo-list="roadshow" hidden>
+        <div class="todo-action-hint"><strong>铁三角路演：</strong>资源已配置、待按计划执行的路演（与下方「路演申请与执行」中「待执行」一致）。路演结束后请录入记录。</div>
+        <div class="card" style="padding:0 14px">
+          <a class="list-item" href="manager-roadshow-plan-signed.html">
+            <div class="list-content">
+              <div class="list-title">绿源环保科技有限公司</div>
+              <div class="list-desc">明日 10:00 · 零售+科技已确认 · 已签约薪福宝+代发</div>
+              <div class="list-meta"><span class="tag tag-purple">路演</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </a>
+        </div>
+        <div class="card" style="padding:0 14px">
+          <a class="list-item" href="manager-roadshow-plan.html">
+            <div class="list-content">
+              <div class="list-title">星辰传媒有限公司</div>
+              <div class="list-desc">周五 15:00 · 对公+零售 · 已拜访待二次路演</div>
+              <div class="list-meta"><span class="tag tag-purple">路演</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </a>
+        </div>
+      </div>
+      <div data-todo-list="grow" hidden>
+        <div class="todo-action-hint"><strong>模块深度提升：</strong>回访已签约客户，推动开通未使用模块。</div>
+        <div class="card" style="padding:0 14px">
+          <a class="list-item" href="manager-detail-active.html">
+            <div class="list-content">
+              <div class="list-title">粤食餐饮管理有限公司</div>
+              <div class="list-desc">薪福宝 2 模块 · 流程审批/费控报销未开通 · 代发 86 笔/月</div>
+              <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </a>
+        </div>
+        <div class="card" style="padding:0 14px">
+          <a class="list-item" href="manager-detail-signed.html">
+            <div class="list-content">
+              <div class="list-title">博远软件科技有限公司</div>
+              <div class="list-desc">薪福宝 3 模块 · 流程审批/费控报销未开通 · 代发已签约未激活</div>
+              <div class="list-meta"><span class="tag tag-orange">已签约</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="tab-bar tab-bar-links">
+    <a class="tab-item active" href="manager-todo.html"><span class="icon">🏠</span>待办</a>
+    <a class="tab-item" href="manager-customers.html"><span class="icon">👥</span>客户</a>
+    <a class="tab-item" href="manager-follow-log.html"><span class="icon">✏️</span>跟进</a>
+    <a class="tab-item has-badge" href="manager-messages.html"><span class="dot"></span><span class="icon">🔔</span>消息</a>
+  </nav>
+</div>
+<script src="common.js"></script>
+<script>initStandalonePage();</script>
+</body>
+</html>

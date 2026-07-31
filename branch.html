@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>分行/中支 · 广企通机构视图</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell">
+  <div class="status-bar">
+    <span>9:41</span>
+    <span>广信 CRM · 分行</span>
+    <span>100%</span>
+  </div>
+
+  <header class="app-header">
+    <div class="header-row">
+      <button class="header-back" type="button" aria-label="返回">‹</button>
+      <div class="header-title-wrap">
+        <div class="app-title">广企通 · 机构视图</div>
+        <div class="app-subtitle">广州分行 · 一户一表分行督导</div>
+        <span class="role-tag">分行/中支视角</span>
+      </div>
+      <span class="header-badge">6月</span>
+    </div>
+  </header>
+
+  <div class="app-body">
+    <!-- 首页概览 -->
+    <div class="view active" data-tab="home">
+      <div class="kpi-grid">
+        <div class="kpi-card highlight">
+          <div class="kpi-label">本机构客户数</div>
+          <div class="kpi-value">32</div>
+          <div class="kpi-trend">全行占比 17.2%</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">触达率</div>
+          <div class="kpi-value">89<small>%</small></div>
+          <div class="kpi-trend up">↑ 3.2pp</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">转化率</div>
+          <div class="kpi-value">48<small>%</small></div>
+          <div class="kpi-trend up">全行第 1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">待处理预警</div>
+          <div class="kpi-value" style="color:var(--danger)">4</div>
+          <div class="kpi-trend">跟进超时</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">转化漏斗 <span class="more" data-goto="page-funnel" data-title="转化漏斗" data-subtitle="本机构客户各环节分布">详情 ›</span></div>
+        <div class="funnel-step"><span class="funnel-label">待触达</span><div class="funnel-bar-wrap"><div class="progress-bar"><div class="progress-fill" style="width:11%;background:var(--text-muted)"></div></div></div><span class="funnel-count">4</span></div>
+        <div class="funnel-step"><span class="funnel-label">已拜访</span><div class="funnel-bar-wrap"><div class="progress-bar"><div class="progress-fill" style="width:35%"></div></div></div><span class="funnel-count">11</span></div>
+        <div class="funnel-step"><span class="funnel-label">已签约</span><div class="funnel-bar-wrap"><div class="progress-bar"><div class="progress-fill" style="width:48%"></div></div></div><span class="funnel-count">15</span></div>
+        <div class="funnel-step"><span class="funnel-label">活跃使用</span><div class="funnel-bar-wrap"><div class="progress-bar"><div class="progress-fill" style="width:32%;background:var(--success)"></div></div></div><span class="funnel-count">10</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">需立即关注</div>
+        <div class="list-item" data-goto="page-branch-roster" data-title="清单下发" data-subtitle="本机构 · 接收与分配">
+          <div class="list-icon">📥</div>
+          <div class="list-content">
+            <div class="list-title">清单下发情况</div>
+            <div class="list-desc">3 个批次 · 本机构 42 户 · 已分配 40 · 触达 86%</div>
+            <div class="list-meta"><span class="tag tag-blue">清单下发</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-alert" data-title="预警清单" data-subtitle="跟进超时 · 4 户">
+          <div class="list-icon" style="background:var(--danger-bg)">⚠️</div>
+          <div class="list-content">
+            <div class="list-title">4 户跟进超时</div>
+            <div class="list-desc">超过 7 天未更新跟进记录，系统已提醒</div>
+            <div class="list-meta"><span class="tag tag-red">预警</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-coord" data-title="协调事项" data-subtitle="需上级协调 · 2 户">
+          <div class="list-icon">🤝</div>
+          <div class="list-content">
+            <div class="list-title">2 户需上级协调</div>
+            <div class="list-desc">跨条线资源、大额授信审批等</div>
+            <div class="list-meta"><span class="tag tag-orange">协调</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <a class="list-item" href="branch-roadshow-config.html">
+          <div class="list-icon" style="background:var(--purple-bg)">🎤</div>
+          <div class="list-content">
+            <div class="list-title">1 单路演待配置资源</div>
+            <div class="list-desc">华南智造 · 张经理申请 · 待指派零售协同</div>
+            <div class="list-meta"><span class="tag tag-purple">路演配置</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 客户清单 -->
+    <div class="view" data-tab="customers">
+      <div class="tip-bar">点击客户查看一户一表详情 · 含客户经理录入的跟进记录与路演明细</div>
+      <div class="search-box search-box-white">
+        <span>🔍</span>
+        <input type="text" placeholder="搜索客户名称、客户经理…">
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-chip active" data-filter="all">全部</button>
+        <button class="filter-chip" data-filter="wait">待触达</button>
+        <button class="filter-chip" data-filter="visit">已拜访</button>
+        <button class="filter-chip" data-filter="none">暂无意向</button>
+        <button class="filter-chip" data-filter="signed">已签约</button>
+        <button class="filter-chip" data-filter="active">活跃使用</button>
+      </div>
+
+      <div data-filter-list>
+        <div class="card" style="padding:0 14px" data-status="wait">
+          <div class="list-item" data-goto="page-branch-customer-wait" data-title="华南智造科技" data-subtitle="待触达 · 天河支行">
+            <div class="list-content">
+              <div class="list-title">华南智造科技有限公司</div>
+              <div class="list-desc">新开户 · 张经理 · 待首次拜访</div>
+              <div class="list-meta"><span class="tag tag-blue">待触达</span><span class="tag tag-gray">薪福宝</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="visit">
+          <div class="list-item" data-goto="page-branch-customer-visit" data-title="宏达建设集团" data-subtitle="已拜访 · 越秀支行">
+            <div class="list-content">
+              <div class="list-title">宏达建设集团有限公司</div>
+              <div class="list-desc">已路演 2 次 · 李经理 · 待意向确认</div>
+              <div class="list-meta"><span class="tag tag-orange">已拜访</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="active">
+          <div class="list-item" data-goto="page-branch-customer-active" data-title="粤食餐饮" data-subtitle="活跃使用 · 天河支行">
+            <div class="list-content">
+              <div class="list-title">粤食餐饮管理公司</div>
+              <div class="list-desc">代发活跃 · 张经理 · 薪福宝 2 模块</div>
+              <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="none">
+          <div class="list-item" data-goto="page-branch-customer-none" data-title="恒通贸易" data-subtitle="暂无意向 · 白云支行">
+            <div class="list-content">
+              <div class="list-title">恒通贸易有限公司</div>
+              <div class="list-desc">暂无意向 · 已复盘 · 李经理 · 下月再访</div>
+              <div class="list-meta"><span class="tag tag-gray">暂无意向</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="signed">
+          <div class="list-item" data-goto="page-branch-customer-signed" data-title="绿源环保科技" data-subtitle="已签约 · 天河支行">
+            <div class="list-content">
+              <div class="list-title">绿源环保科技有限公司</div>
+              <div class="list-desc">已签约薪福宝+代发 · 张经理 · 代发待激活</div>
+              <div class="list-meta"><span class="tag tag-blue">已签约</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 进度督导 -->
+    <div class="view" data-tab="supervise">
+      <div class="tip-bar">查看本机构各网点、客户经理的一户一表推进进度与跟进及时性</div>
+
+      <div class="card">
+        <div class="card-title">网点排名（触达率）</div>
+        <div class="progress-row">
+          <div class="progress-header"><span class="name">天河支行</span><span>96%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:96%"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="progress-header"><span class="name">越秀支行</span><span>91%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:91%"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="progress-header"><span class="name">白云支行</span><span>78%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="progress-header"><span class="name" style="color:var(--danger)">番禺支行 ⚠</span><span>62%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width:62%;background:var(--warning)"></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">进度偏慢客户经理</div>
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">陈经理 · 番禺支行</div>
+            <div class="list-desc">待触达 3 户 · 平均跟进 16 天</div>
+            <div class="list-meta"><span class="tag tag-red">需督导</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">刘经理 · 花都支行</div>
+            <div class="list-desc">转化率 22% · 低于机构均值</div>
+            <div class="list-meta"><span class="tag tag-orange">关注</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">客户需求（功能诉求）<span class="more" data-goto="page-branch-demands" data-title="客户需求汇总" data-subtitle="本机构 · 功能诉求">全部 ›</span></div>
+        <div class="list-item" data-goto="page-branch-demands" data-title="客户需求汇总" data-subtitle="本机构">
+          <div class="list-content">
+            <div class="list-title">薪福宝流程审批按天数自动路由</div>
+            <div class="list-desc">华南智造、粤食餐饮 · 张经理录入 · 已归集需求池</div>
+            <div class="list-meta"><span class="tag tag-purple">拜访录入</span><span class="tag tag-orange">待评审</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-branch-demands" data-title="客户需求汇总" data-subtitle="本机构">
+          <div class="list-content">
+            <div class="list-title">企业网银批量代发界面简化</div>
+            <div class="list-desc">康泽生物 · 王经理录入 · 科技部推进中</div>
+            <div class="list-meta"><span class="tag tag-purple">回访录入</span><span class="tag tag-blue">推进中</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 预警 -->
+    <div class="view" data-tab="alert">
+      <div class="alert-bar">跟进超时 → 自动提醒上级介入 · 共 4 户待处理</div>
+
+      <div class="card">
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">鑫达包装材料 · 超时 12 天</div>
+            <div class="list-desc">责任人：张经理（天河）· 状态：已拜访</div>
+            <div class="list-meta"><span class="tag tag-red">超时</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">联创软件 · 超时 9 天</div>
+            <div class="list-desc">责任人：陈经理（番禺）· 状态：待触达</div>
+            <div class="list-meta"><span class="tag tag-red">超时</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">美家家居 · 活跃度下降</div>
+            <div class="list-desc">企业网银 30 天未登录 · 王经理</div>
+            <div class="list-meta"><span class="tag tag-orange">智能预警</span></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="button">批量发送督导提醒</button>
+    </div>
+
+    <!-- 子页面 -->
+    <div class="sub-view" id="page-funnel">
+      <div class="card">
+        <div class="card-title">卡点分析</div>
+        <div class="field-row"><span class="field-label">卡在「首次拜访」</span><span class="field-value">4 户</span></div>
+        <div class="field-row"><span class="field-label">卡在「产品演示」</span><span class="field-value" style="color:var(--warning)">8 户</span></div>
+        <div class="field-row"><span class="field-label">卡在「签约开通」</span><span class="field-value">5 户</span></div>
+        <div class="field-row"><span class="field-label">签约后未活跃</span><span class="field-value" style="color:var(--danger)">6 户</span></div>
+      </div>
+    </div>
+
+    <div class="sub-view" id="page-alert">
+      <div class="alert-bar">跟进超时 4 户 · 点击查看客户经理录入与跟进明细</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item" data-goto="page-branch-customer-visit" data-title="鑫达包装材料" data-subtitle="超时 · 客户明细">
+          <div class="list-content">
+            <div class="list-title">鑫达包装材料有限公司</div>
+            <div class="list-desc">超时 12 天 · 张经理（天河）· 已拜访</div>
+            <div class="list-meta"><span class="tag tag-red">超时</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-branch-customer-wait" data-title="联创软件" data-subtitle="超时 · 客户明细">
+          <div class="list-content">
+            <div class="list-title">联创软件科技有限公司</div>
+            <div class="list-desc">超时 9 天 · 陈经理（番禺）· 待触达</div>
+            <div class="list-meta"><span class="tag tag-red">超时</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-branch-customer-warn" data-title="美家家居" data-subtitle="预警 · 客户明细">
+          <div class="list-content">
+            <div class="list-title">美家家居有限公司</div>
+            <div class="list-desc">网银 30 天未登录 · 张经理 · 智能预警</div>
+            <div class="list-meta"><span class="tag tag-orange">智能预警</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-branch-alert-detail" data-title="白云建材" data-subtitle="超时 · 客户明细">
+          <div class="list-content">
+            <div class="list-title">白云建材有限公司</div>
+            <div class="list-desc">超时 8 天 · 刘经理（白云）· 已拜访</div>
+            <div class="list-meta"><span class="tag tag-red">超时</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-view" id="page-coord">
+      <div class="tip-bar">2 户需上级协调 · 点击查看协调事项与客户经理跟进明细</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item" data-goto="page-branch-customer-visit" data-title="宏达建设集团" data-subtitle="协调 · 客户明细">
+          <div class="list-content">
+            <div class="list-title">宏达建设集团有限公司</div>
+            <div class="list-desc">需总行授信政策协调 · 申请 800 万 · 李经理</div>
+            <div class="list-meta"><span class="tag tag-orange">授信协调</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-branch-coord-guanghui" data-title="广汇汽车服务" data-subtitle="协调 · 客户明细">
+          <div class="list-content">
+            <div class="list-title">广汇汽车服务有限公司</div>
+            <div class="list-desc">需科技条线现场支持 · 系统对接复杂 · 王经理</div>
+            <div class="list-meta"><span class="tag tag-blue">科技协同</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-view" id="page-branch-customer-warn">
+      <span class="view-source-tag">客户经理录入 · 只读查看</span>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">
+          <div>
+            <div style="font-size:16px;font-weight:600">美家家居有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA7ZZZZ · 天河支行</div>
+          </div>
+          <span class="tag tag-red">预警</span>
+        </div>
+        <div class="field-row"><span class="field-label">客户经理</span><span class="field-value">张经理</span></div>
+        <div class="field-row"><span class="field-label">预警原因</span><span class="field-value" style="color:var(--danger)">企业网银 30 天未登录</span></div>
+        <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value">05-28 · 已超时</span></div>
+      </div>
+      <div class="section-label">已签约产品使用情况（自动回流）</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-row"><span class="label">企业网银</span><span class="value warn">30 天未登录</span><span class="sync-tag">ECIF · 06-26</span></div>
+        <div class="product-usage-row"><span class="label">代发</span><span class="value warn">42 笔/月 · 较上月下降</span><span class="sync-tag">核心 · 06-20</span></div>
+      </div>
+      <div class="section-label">客户经理跟进记录</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">05-28 · 张经理录入</div>
+            <div class="follow-record-detail">
+              <div class="follow-record-row"><span>拜访类型</span><span>回访跟进</span></div>
+              <div class="follow-record-row"><span>客户反馈</span><span>财务人事变动、暂未使用网银</span></div>
+            </div>
+            <div class="timeline-text">摘要：客户称新财务尚未开通网银权限，约定两周内回访；此后未再录入。</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-outline" type="button">发送督导消息给张经理</button>
+    </div>
+
+    <div class="sub-view" id="page-branch-alert-detail">
+      <span class="view-source-tag">客户经理录入 · 只读查看</span>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">
+          <div>
+            <div style="font-size:16px;font-weight:600">白云建材有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">白云支行 · 刘经理</div>
+          </div>
+          <span class="tag tag-red">超时 8 天</span>
+        </div>
+        <div class="field-row"><span class="field-label">跟踪状态</span><span class="field-value">已拜访 · 待二次跟进</span></div>
+        <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value" style="color:var(--danger)">06-18（超时）</span></div>
+      </div>
+      <div class="section-label">客户经理跟进记录</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-18 · 刘经理录入</div>
+            <div class="follow-record-detail">
+              <div class="follow-record-row"><span>拜访类型</span><span>回访跟进</span></div>
+              <div class="follow-record-row"><span>下次动作</span><span>产品演示 · 06-25</span></div>
+            </div>
+            <div class="timeline-text">摘要：首次演示薪福宝，客户意向一般；约定 06-25 二次演示但未执行。</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-outline" type="button">发送督导消息给刘经理</button>
+    </div>
+
+    <div class="sub-view" id="page-branch-coord-guanghui">
+      <span class="view-source-tag">客户经理录入 · 只读查看</span>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">
+          <div>
+            <div style="font-size:16px;font-weight:600">广汇汽车服务有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">越秀支行 · 王经理</div>
+          </div>
+          <span class="tag tag-blue">科技协同</span>
+        </div>
+        <div class="field-row"><span class="field-label">协调事项</span><span class="field-value">薪福宝与 DMS 系统对接</span></div>
+        <div class="field-row"><span class="field-label">申请时间</span><span class="field-value">06-15</span></div>
+      </div>
+      <div class="section-label">客户经理跟进记录</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-20 · 王经理录入</div>
+            <div class="follow-record-detail">
+              <div class="follow-record-row"><span>拜访类型</span><span>铁三角协同</span></div>
+              <div class="follow-record-row"><span>功能诉求</span><span>薪福宝·OA/HR系统对接 <span class="demand-tag">已入需求池</span></span></div>
+              <div class="follow-record-row"><span>诉求描述</span><span>API 对接、数据同步</span></div>
+              <div class="follow-record-row"><span>客户反馈</span><span>需科技现场评估</span></div>
+            </div>
+            <div class="timeline-text">摘要：客户门店多、用工系统复杂，王经理申请科技条线现场支持，中支已上报分行。</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">中支协调备注</div>
+        <p style="font-size:13px;color:var(--text-secondary);line-height:1.6">已联系科技部排期 07-02 现场调研，需总行科技资源支持接口规范评审。</p>
+      </div>
+      <button class="btn btn-outline" type="button">发送督导消息给王经理</button>
+    </div>
+
+    <div class="sub-view" id="page-branch-customer-wait">
+      <span class="view-source-tag">客户经理录入 · 只读查看</span>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">
+          <div>
+            <div style="font-size:16px;font-weight:600">华南智造科技有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA5XXXX · 天河支行 · 制造业</div>
+          </div>
+          <span class="tag tag-blue">待触达</span>
+        </div>
+        <div class="field-row"><span class="field-label">客户经理</span><span class="field-value">张经理</span></div>
+        <div class="field-row"><span class="field-label">客户来源</span><span class="field-value">新开户 · 薪福宝条件</span></div>
+        <div class="field-row"><span class="field-label">清单批次</span><span class="field-value">6月新开户增量 · 06-20 分配至张经理</span></div>
+        <div class="field-row"><span class="field-label">管户人</span><span class="field-value">张经理 · 负责待办推进</span></div>
+        <div class="field-row"><span class="field-label">表册生成</span><span class="field-value">2026-06-20 自动</span></div>
+        <div class="field-row"><span class="field-label">计划跟进</span><span class="field-value" style="color:var(--danger)">06-24（已逾期 3 天）</span></div>
+      </div>
+      <div class="section-label">行内产品使用（自动回流）</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-empty">客户尚未签约行内产品，暂无使用回流数据</div>
+      </div>
+      <div class="section-label">客户经理跟进记录</div>
+      <div class="card">
+        <p style="font-size:13px;color:var(--text-muted);text-align:center;padding:12px 0">张经理尚未录入跟进记录 · 待完成首次拜访</p>
+      </div>
+      <div class="card">
+        <div class="card-title">中支督导备注</div>
+        <p style="font-size:13px;color:var(--text-secondary);line-height:1.6">该客户为园区批量开户，建议组织联合路演，对公+零售+科技铁三角协同推进。</p>
+      </div>
+      <button class="btn btn-outline" type="button">发送督导消息给张经理</button>
+    </div>
+
+    <div class="sub-view" id="page-branch-customer-visit">
+      <span class="view-source-tag">客户经理录入 · 只读查看</span>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">
+          <div>
+            <div style="font-size:16px;font-weight:600">宏达建设集团有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA8HHHH · 越秀支行 · 建筑业</div>
+          </div>
+          <span class="tag tag-orange">已拜访</span>
+        </div>
+        <div class="field-row"><span class="field-label">客户经理</span><span class="field-value">李经理</span></div>
+        <div class="field-row"><span class="field-label">跟踪状态</span><span class="field-value">已拜访 · 待意向确认</span></div>
+        <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value">06-18</span></div>
+        <div class="field-row"><span class="field-label">下次计划</span><span class="field-value">07-02 · 二次路演</span></div>
+      </div>
+      <div class="section-label">客户经理跟进记录</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-18 · 李经理录入</div>
+            <div class="follow-record-detail">
+              <div class="follow-record-row"><span>拜访类型</span><span>回访跟进</span></div>
+              <div class="follow-record-row"><span>企业规模</span><span>200-500 人</span></div>
+              <div class="follow-record-row"><span>业务意向</span><span>代发、授信咨询</span></div>
+              <div class="follow-record-row"><span>功能诉求</span><span>—</span></div>
+              <div class="follow-record-row"><span>客户反馈</span><span>需进一步演示</span></div>
+              <div class="follow-record-row"><span>已推介产品</span><span>薪福宝、企业网银</span></div>
+              <div class="follow-record-row"><span>下次动作</span><span>安排路演</span></div>
+            </div>
+            <div class="timeline-text">摘要：回访跟进，企业规模 200-500 人；需求代发、授信咨询；客户需进一步演示；已推介薪福宝、企业网银；下次安排路演。</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">05-28 · 李经理录入</div>
+            <div class="follow-record-detail">
+              <div class="follow-record-row"><span>拜访类型</span><span>首次拜访</span></div>
+              <div class="follow-record-row"><span>客户反馈</span><span>考虑中</span></div>
+            </div>
+            <div class="timeline-text">摘要：首次拜访，了解代发与薪福宝需求，客户表示考虑中。</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-label">铁三角路演记录（李经理录入）</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-05 · 首次路演 · 待跟进</div>
+            <div class="timeline-text">
+              <strong>对公</strong>：薪福宝、企业网银、银企直连<br>
+              <strong>零售</strong>：代发工资、员工信用卡<br>
+              <strong>科技</strong>：API 对接方案说明<br>
+              <strong>转化结果</strong>：待跟进 · 需二次路演确认授信方案
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-outline" type="button">发送督导消息给李经理</button>
+    </div>
+
+    <div class="sub-view" id="page-branch-customer-active">
+      <span class="view-source-tag">客户经理录入 · 只读查看</span>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">
+          <div>
+            <div style="font-size:16px;font-weight:600">粤食餐饮管理有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA9YYYY · 天河支行 · 餐饮服务业</div>
+          </div>
+          <span class="tag tag-green">活跃使用</span>
+        </div>
+        <div class="field-row"><span class="field-label">客户经理</span><span class="field-value">张经理</span></div>
+        <div class="field-row"><span class="field-label">签约产品</span><span class="field-value">薪福宝+代发+网银+银信通+红棉理财</span></div>
+        <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value">06-24</span></div>
+      </div>
+      <div class="section-label">已签约产品使用情况（自动回流）</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-head">
+          <span class="product-usage-customer">粤食餐饮管理有限公司</span>
+          <span class="tag tag-green">已签约 5 项</span>
+        </div>
+        <div class="product-usage-block">
+          <div class="product-usage-name">薪福宝</div>
+          <div class="usage-grid">
+            <div class="usage-item"><div class="usage-icon">👥</div><div class="usage-name">组织人事</div><div class="usage-status on">使用中</div></div>
+            <div class="usage-item off"><div class="usage-icon">📋</div><div class="usage-name">流程审批</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item"><div class="usage-icon">📅</div><div class="usage-name">假期考勤</div><div class="usage-status on">使用中</div></div>
+            <div class="usage-item off"><div class="usage-icon">💰</div><div class="usage-name">薪酬个税</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item off"><div class="usage-icon">🧾</div><div class="usage-name">费控报销</div><div class="usage-status off">未开通</div></div>
+          </div>
+        </div>
+        <div class="product-usage-row"><span class="label">代发</span><span class="value">86 笔/月</span><span class="sync-tag">核心 · 06-24</span></div>
+        <div class="product-usage-row"><span class="label">企业网银</span><span class="value">近 7 日登录 3 次</span><span class="sync-tag">ECIF · 06-26</span></div>
+      </div>
+      <div class="section-label">客户经理跟进记录</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-24 · 张经理录入</div>
+            <div class="follow-record-detail">
+              <div class="follow-record-row"><span>拜访类型</span><span>回访跟进</span></div>
+              <div class="follow-record-row"><span>业务意向</span><span>薪福宝、代发</span></div>
+              <div class="follow-record-row"><span>功能诉求</span><span>薪福宝·流程审批优化 <span class="demand-tag">已入需求池</span></span></div>
+              <div class="follow-record-row"><span>诉求描述</span><span>审批层级多，希望按天数自动路由</span></div>
+              <div class="follow-record-row"><span>客户反馈</span><span>意向明确</span></div>
+              <div class="follow-record-row"><span>下次动作</span><span>产品演示</span></div>
+            </div>
+            <div class="timeline-text">摘要：回访代发情况，客户满意；意向了解流程审批模块，约定 07-08 演示。</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-label">铁三角路演记录</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">05-15 · 首次路演 · 已转化</div>
+            <div class="timeline-text"><strong>对公</strong>：薪福宝、企业网银 · <strong>零售</strong>：代发 · <strong>科技</strong>：部署培训 · 转化：已签约</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-outline" type="button">发送督导消息给张经理</button>
+    </div>
+
+    <div class="sub-view" id="page-branch-customer-none">
+      <span class="view-source-tag">客户经理录入 · 只读查看</span>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">
+          <div>
+            <div style="font-size:16px;font-weight:600">恒通贸易有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA3BBBB · 白云支行</div>
+          </div>
+          <span class="tag tag-gray">暂无意向</span>
+        </div>
+        <div class="field-row"><span class="field-label">客户经理</span><span class="field-value">李经理</span></div>
+        <div class="field-row"><span class="field-label">跟踪状态</span><span class="field-value">暂无意向 · 已复盘</span></div>
+        <div class="field-row"><span class="field-label">下次计划</span><span class="field-value">07-15 · 下月再访</span></div>
+      </div>
+      <div class="section-label">客户经理跟进记录</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-15 · 李经理录入 · 复盘</div>
+            <div class="follow-record-detail">
+              <div class="follow-record-row"><span>拜访类型</span><span>回访跟进</span></div>
+              <div class="follow-record-row"><span>客户反馈</span><span>暂无意向、竞品绑定</span></div>
+              <div class="follow-record-row"><span>跟踪状态</span><span>暂无意向</span></div>
+            </div>
+            <div class="timeline-text">摘要：代发已与竞品合作满 2 年，薪福宝与现有 HR 系统重叠；复盘结论维持关系，下月再访。</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-outline" type="button">发送督导消息给李经理</button>
+    </div>
+
+    <div class="sub-view" id="page-branch-customer-signed">
+      <span class="view-source-tag">客户经理录入 · 只读查看</span>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:10px">
+          <div>
+            <div style="font-size:16px;font-weight:600">绿源环保科技有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA6WWWW · 天河支行</div>
+          </div>
+          <span class="tag tag-orange">已签约</span>
+        </div>
+        <div class="field-row"><span class="field-label">客户经理</span><span class="field-value">张经理</span></div>
+        <div class="field-row"><span class="field-label">签约产品</span><span class="field-value">薪福宝+代发+银信通</span></div>
+        <div class="field-row"><span class="field-label">签约日期</span><span class="field-value">2026-06-18</span></div>
+      </div>
+      <div class="section-label">已签约产品使用情况（自动回流）</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-row"><span class="label">代发</span><span class="value warn">签约后尚未发生</span><span class="sync-tag">核心 · 06-26</span></div>
+        <div class="product-usage-row"><span class="label">薪福宝</span><span class="value warn">已签约 · 待路演开通</span><span class="sync-tag">ECIF · 06-18</span></div>
+      </div>
+      <div class="section-label">客户经理跟进记录</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-20 · 张经理录入</div>
+            <div class="follow-record-detail">
+              <div class="follow-record-row"><span>拜访类型</span><span>回访跟进</span></div>
+              <div class="follow-record-row"><span>客户反馈</span><span>考虑中</span></div>
+              <div class="follow-record-row"><span>下次动作</span><span>安排路演</span></div>
+            </div>
+            <div class="timeline-text">摘要：签约后回访，代发流程待财务确认；约定明日铁三角路演推动首笔代发。</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-label">铁三角路演记录（待录入）</div>
+      <div class="card">
+        <p style="font-size:13px;color:var(--text-muted);padding:8px 0">明日 10:00 路演已安排 · 张经理待现场录入对公/零售/科技营销记录</p>
+      </div>
+      <button class="btn btn-outline" type="button">发送督导消息给张经理</button>
+    </div>
+
+    <div class="sub-view" id="page-branch-demands">
+      <span class="view-source-tag">客户经理录入 · 中支只读查阅 · 已归集需求池</span>
+      <div class="tip-bar">拜访/回访中涉及系统功能提升的诉求自动汇总 · 同类合并后推送总行需求池评审</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">薪福宝流程审批按天数自动路由</div>
+            <div class="list-desc">反馈 3 次 · 华南智造、粤食餐饮、宏达建设</div>
+            <div class="list-meta"><span class="tag tag-purple">拜访/回访录入</span><span class="tag tag-orange">待评审</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">薪福宝与 OA/HR 系统对接</div>
+            <div class="list-desc">反馈 1 次 · 广汇汽车 · 王经理 · 06-20</div>
+            <div class="list-meta"><span class="tag tag-purple">铁三角录入</span><span class="tag tag-orange">待评审</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">企业网银批量代发界面简化</div>
+            <div class="list-desc">反馈 2 次 · 康泽生物、锦程商旅 · 已推送总行</div>
+            <div class="list-meta"><span class="tag tag-purple">回访录入</span><span class="tag tag-blue">推进中</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">06-26 · 华南智造 · 张经理首次拜访</div>
+        <div class="follow-record-detail">
+          <div class="follow-record-row"><span>涉及系统</span><span>薪福宝</span></div>
+          <div class="follow-record-row"><span>功能诉求</span><span>流程审批优化</span></div>
+          <div class="follow-record-row"><span>诉求描述</span><span>请假审批层级多，希望按天数自动路由</span></div>
+          <div class="follow-record-row"><span>归集状态</span><span>已合并至需求池 · 待评审</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">06-24 · 粤食餐饮 · 张经理回访跟进</div>
+        <div class="follow-record-detail">
+          <div class="follow-record-row"><span>涉及系统</span><span>薪福宝</span></div>
+          <div class="follow-record-row"><span>功能诉求</span><span>流程审批优化</span></div>
+          <div class="follow-record-row"><span>诉求描述</span><span>店长→区域→HR 链路过长</span></div>
+          <div class="follow-record-row"><span>归集状态</span><span>已合并至需求池 · 待评审</span></div>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--text-muted);padding:0 4px;line-height:1.6">中支可查阅本机构客户经理录入的客户功能诉求；涉及全行共性优化的条目由总行需求池统一评审排期。</p>
+    </div>
+
+    <!-- 清单下发 · 本机构 -->
+    <div class="sub-view" id="page-branch-roster">
+      <span class="roster-scope-tag">分行/中支视角 · 广州分行</span>
+      <div class="tip-bar">查看总行推送至本机构的清单批次、管户分配与客户经理待办推进进度</div>
+      <div class="roster-policy-box branch">
+        <strong>推进原则：</strong>清单客户分配至管护客户经理后，由其在一户一表待办中推进触达与转化。<br>
+        <strong>调整权限：</strong>分行/中支可在网点归属变更、长期未跟进、人员变动等情形下调整管户人；调整后系统留痕，原则上由现任管户人推进。
+      </div>
+      <div class="card">
+        <div class="roster-stat-row">
+          <div class="roster-stat"><div class="num">3</div><div class="lbl">接收批次</div></div>
+          <div class="roster-stat"><div class="num">42</div><div class="lbl">在管客户</div></div>
+          <div class="roster-stat"><div class="num">95%</div><div class="lbl">已分配率</div></div>
+        </div>
+      </div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item" data-goto="page-branch-roster-park" data-title="园区批量清单" data-subtitle="广州分行 · 批次明细">
+          <div class="list-content">
+            <div class="list-title">天河园区批量开户清单</div>
+            <div class="list-desc">总行 06-18 下发 · 32 户 · 已分配 30 · 触达 78%</div>
+            <div class="list-meta"><span class="tag tag-purple">园区批量</span><span class="tag tag-orange">2 户待分配</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-branch-roster-stock" data-title="存量清单" data-subtitle="广州分行 · 批次明细">
+          <div class="list-content">
+            <div class="list-title">6月存量薪福宝清单（广州份额）</div>
+            <div class="list-desc">总行 06-01 下发 · 32 户 · 已分配 32 · 触达 89%</div>
+            <div class="list-meta"><span class="tag tag-blue">存量清单</span><span class="tag tag-green">正常</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-branch-roster-new" data-title="新开户增量" data-subtitle="广州分行 · 批次明细">
+          <div class="list-content">
+            <div class="list-title">6月新开户增量（广州）</div>
+            <div class="list-desc">持续注入 · 8 户 · 已分配 8 · 本周 +2</div>
+            <div class="list-meta"><span class="tag tag-orange">增量注入</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-view" id="page-branch-roster-park">
+      <span class="roster-scope-tag">分行/中支视角 · 批次明细</span>
+      <div class="card">
+        <div class="roster-batch-head">
+          <div>
+            <div class="roster-batch-title">天河园区批量开户清单</div>
+            <div class="roster-batch-meta">接收 R202606-PARK-GZ · 06-18 10:00</div>
+          </div>
+          <span class="tag tag-purple">园区批量</span>
+        </div>
+        <div class="roster-flow">
+          <span class="roster-flow-step done">总行下发</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">广州分行接收</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step">网点分配 30/32</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step">客户经理触达 78%</span>
+        </div>
+        <div class="field-row"><span class="field-label">待分配</span><span class="field-value" style="color:var(--warning)">2 户 · 待中支指定管护客户经理</span></div>
+      </div>
+      <div class="section-label">网点 / 管户分配（本机构权限 · 可调整）</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">天河支行 · 张经理 <span class="tag tag-gray" style="margin-left:4px">管户人</span></div>
+            <div class="list-desc">5 户 · 待触达 2 · 已拜访 3 · 由管户人推进待办</div>
+            <div class="list-meta"><span class="tag tag-green">正常</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">越秀支行 · 李经理 <span class="tag tag-gray" style="margin-left:4px">管户人</span></div>
+            <div class="list-desc">4 户 · 待触达 1 · 已拜访 3</div>
+            <div class="list-meta"><span class="tag tag-green">正常</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-content">
+            <div class="list-title">番禺支行 · 陈经理 <span class="tag tag-gray" style="margin-left:4px">管户人</span></div>
+            <div class="list-desc">3 户 · 待触达 2 · 已拜访 1 · 跟进偏慢</div>
+            <div class="list-meta"><span class="tag tag-orange">偏慢</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">管户调整记录（本机构）</div>
+        <div class="roster-adjust-row">
+          <span>06-22 · 海珠物流</span>
+          <span style="color:var(--text-muted)">待分配 → 张经理 · 中支指定</span>
+        </div>
+        <div class="roster-adjust-row">
+          <span>06-10 · 某制造客户</span>
+          <span style="color:var(--text-muted)">陈经理 → 李经理 · 网点变更</span>
+        </div>
+        <button class="btn btn-outline" type="button" style="margin-top:10px">调整管户 / 改派</button>
+      </div>
+    </div>
+
+    <div class="sub-view" id="page-branch-roster-stock">
+      <span class="roster-scope-tag">分行/中支视角 · 批次明细</span>
+      <div class="card">
+        <div class="roster-batch-title">6月存量薪福宝清单（广州份额）</div>
+        <div class="roster-batch-meta" style="margin:6px 0 12px">接收 32 户 · 06-01 · 已全部完成分配</div>
+        <div class="field-row"><span class="field-label">触达率</span><span class="field-value">89% · 28/32 已首次拜访</span></div>
+        <div class="field-row"><span class="field-label">待触达积压</span><span class="field-value">4 户（含华南智造 1 户逾期）</span></div>
+      </div>
+    </div>
+
+    <div class="sub-view" id="page-branch-roster-new">
+      <span class="roster-scope-tag">分行/中支视角 · 批次明细</span>
+      <div class="card">
+        <div class="roster-batch-title">6月新开户增量（广州）</div>
+        <div class="roster-batch-meta" style="margin:6px 0 12px">持续注入 · 累计 8 户 · 本周新增 2 户</div>
+        <div class="field-row"><span class="field-label">识别来源</span><span class="field-value">开户系统 · 广企通条件自动识别</span></div>
+        <div class="field-row"><span class="field-label">平均分配时效</span><span class="field-value">T+1 分配至客户经理</span></div>
+      </div>
+      <div class="section-label">本周新增分配（摘录）</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item" data-goto="page-branch-customer-wait" data-title="华南智造科技" data-subtitle="待触达">
+          <div class="list-content">
+            <div class="list-title">华南智造科技有限公司</div>
+            <div class="list-desc">06-20 注入 · 张经理 · 待首次拜访 · 已逾期</div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="tab-bar">
+    <button class="tab-item active" data-tab="home"><span class="icon">🏠</span>概览</button>
+    <button class="tab-item" data-tab="customers"><span class="icon">📋</span>客户</button>
+    <button class="tab-item" data-tab="supervise"><span class="icon">📊</span>督导</button>
+    <button class="tab-item has-badge" data-tab="alert"><span class="dot"></span><span class="icon">⚠️</span>预警</button>
+  </nav>
+</div>
+<script src="common.js"></script>
+<script>initApp({ defaultTab: 'home' });</script>
+</body>
+</html>

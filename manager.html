@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>客户经理 · 广企通 业务工作台</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell">
+  <div class="status-bar">
+    <span>9:41</span>
+    <span>广信 CRM · 客户经理</span>
+    <span>100%</span>
+  </div>
+
+  <header class="app-header">
+    <div class="header-row">
+      <button class="header-back" type="button" aria-label="返回">‹</button>
+      <div class="header-title-wrap">
+        <div class="app-title">广企通 业务工作台</div>
+        <div class="app-subtitle">张经理 · 广州天河支行 · 对公客户经理</div>
+        <span class="role-tag">客户经理视角</span>
+      </div>
+      <span class="header-badge">12户</span>
+    </div>
+    <div class="search-box">
+      <span>🔍</span>
+      <input type="text" placeholder="搜索我的客户…">
+    </div>
+  </header>
+
+  <div class="app-body">
+    <!-- 首页待办 -->
+    <div class="view active" data-tab="home" data-todo-home>
+      <div class="page-flow-hint" style="margin-bottom:12px"><strong>完整交互版</strong> · 分屏演示请从 <a href="index.html" style="color:var(--blue-700)">Demo 入口</a> 进入各独立页面</div>
+      <div class="tip-bar">今日待办 8 项 · 选择类型进入 · 查看明细后再录入</div>
+
+      <div class="todo-categories">
+        <div class="todo-cat-card" data-todo-type="visit" role="button" tabindex="0">
+          <div class="todo-cat-icon">📌</div>
+          <div class="todo-cat-title">待触达拜访</div>
+          <div class="todo-cat-desc">新开户客户首次拜访</div>
+          <span class="todo-cat-count">2 户</span>
+        </div>
+        <div class="todo-cat-card warn" data-todo-type="warn" role="button" tabindex="0">
+          <div class="todo-cat-icon">⚠️</div>
+          <div class="todo-cat-title">预警回访</div>
+          <div class="todo-cat-desc">活跃度下降、跟进超时</div>
+          <span class="todo-cat-count">2 户</span>
+        </div>
+        <div class="todo-cat-card purple" data-todo-type="roadshow" role="button" tabindex="0">
+          <div class="todo-cat-icon">🎤</div>
+          <div class="todo-cat-title">铁三角路演</div>
+          <div class="todo-cat-desc">协同路演、记录营销情况</div>
+          <span class="todo-cat-count">2 场</span>
+        </div>
+        <div class="todo-cat-card" data-todo-type="grow" role="button" tabindex="0">
+          <div class="todo-cat-icon">📈</div>
+          <div class="todo-cat-title">模块深度提升</div>
+          <div class="todo-cat-desc">推广未开通模块、提升使用深度</div>
+          <span class="todo-cat-count">2 户</span>
+        </div>
+      </div>
+
+      <div class="todo-detail-panel" data-todo-panel hidden>
+        <div data-todo-list="visit" hidden>
+          <div class="todo-action-hint"><strong>待触达拜访：</strong>完成首次拜访，录入客户需求与跟进计划。</div>
+          <div class="card" style="padding:0 14px">
+            <div class="list-item" data-goto="page-detail" data-title="华南智造科技" data-subtitle="待触达 · 客户明细">
+              <div class="list-content">
+                <div class="list-title">华南智造科技有限公司</div>
+                <div class="list-desc">新开户 · 06-20 · 计划今日 14:00 · 已逾期 3 天</div>
+                <div class="list-meta"><span class="tag tag-blue">未触达</span></div>
+              </div>
+              <span class="list-arrow">›</span>
+            </div>
+          </div>
+          <div class="card" style="padding:0 14px">
+            <div class="list-item" data-goto="page-detail" data-title="海珠物流" data-subtitle="待触达 · 客户明细">
+              <div class="list-content">
+                <div class="list-title">海珠物流有限公司</div>
+                <div class="list-desc">新开户 · 06-22 · 计划本周拜访 · 尚未首次触达</div>
+                <div class="list-meta"><span class="tag tag-blue">未触达</span></div>
+              </div>
+              <span class="list-arrow">›</span>
+            </div>
+          </div>
+        </div>
+        <div data-todo-list="warn" hidden>
+          <div class="todo-action-hint"><strong>预警回访：</strong>回访预警客户，了解原因并录入跟进记录。</div>
+          <div class="card" style="padding:0 14px">
+            <div class="list-item" data-goto="page-detail-warn" data-title="美家家居" data-subtitle="预警 · 客户明细">
+              <div class="list-content">
+                <div class="list-title">美家家居有限公司</div>
+                <div class="list-desc">企业网银 30 天未登录 · 代发较上月下降 · 上次跟进 05-28</div>
+                <div class="list-meta"><span class="tag tag-red">预警</span></div>
+              </div>
+              <span class="list-arrow">›</span>
+            </div>
+          </div>
+          <div class="card" style="padding:0 14px">
+            <div class="list-item" data-goto="page-detail-warn" data-title="优鲜连锁超市" data-subtitle="预警 · 客户明细">
+              <div class="list-content">
+                <div class="list-title">优鲜连锁超市有限公司</div>
+                <div class="list-desc">薪福宝 15 天未登录 · 代发笔数骤降 · 上次跟进 06-05</div>
+                <div class="list-meta"><span class="tag tag-red">预警</span></div>
+              </div>
+              <span class="list-arrow">›</span>
+            </div>
+          </div>
+        </div>
+        <div data-todo-list="roadshow" hidden>
+          <div class="todo-action-hint"><strong>铁三角路演：</strong>资源已配置、待按计划执行（与「路演申请与执行」中「待执行」一致）。路演结束后请录入记录。</div>
+          <div class="card" style="padding:0 14px">
+            <a class="list-item" href="manager-roadshow-plan-signed.html">
+              <div class="list-content">
+                <div class="list-title">绿源环保科技有限公司</div>
+                <div class="list-desc">明日 10:00 · 零售+科技已确认 · 已签约薪福宝+代发</div>
+                <div class="list-meta"><span class="tag tag-purple">路演</span></div>
+              </div>
+              <span class="list-arrow">›</span>
+            </a>
+          </div>
+          <div class="card" style="padding:0 14px">
+            <a class="list-item" href="manager-roadshow-plan.html">
+              <div class="list-content">
+                <div class="list-title">星辰传媒有限公司</div>
+                <div class="list-desc">周五 15:00 · 对公+零售 · 已拜访待二次路演</div>
+                <div class="list-meta"><span class="tag tag-purple">路演</span></div>
+              </div>
+              <span class="list-arrow">›</span>
+            </a>
+          </div>
+        </div>
+        <div data-todo-list="grow" hidden>
+          <div class="todo-action-hint"><strong>模块深度提升：</strong>回访已签约客户，推动开通未使用模块。</div>
+          <div class="card" style="padding:0 14px">
+            <div class="list-item" data-goto="page-detail-active" data-title="粤食餐饮管理" data-subtitle="深度提升 · 客户明细">
+              <div class="list-content">
+                <div class="list-title">粤食餐饮管理有限公司</div>
+                <div class="list-desc">薪福宝 2 模块 · 流程审批/费控报销未开通 · 代发 86 笔/月</div>
+                <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+              </div>
+              <span class="list-arrow">›</span>
+            </div>
+          </div>
+          <div class="card" style="padding:0 14px">
+            <div class="list-item" data-goto="page-detail-signed" data-title="博远软件科技" data-subtitle="深度提升 · 客户明细">
+              <div class="list-content">
+                <div class="list-title">博远软件科技有限公司</div>
+                <div class="list-desc">薪福宝 3 模块 · 流程审批/费控报销未开通 · 代发已签约未激活</div>
+                <div class="list-meta"><span class="tag tag-orange">已签约</span></div>
+              </div>
+              <span class="list-arrow">›</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <div class="list-item" data-goto="page-manager-roster" data-title="清单下发" data-subtitle="我的清单批次">
+          <div class="list-icon">📋</div>
+          <div class="list-content">
+            <div class="list-title">清单下发情况</div>
+            <div class="list-desc">3 个批次 · 12 户在管 · 4 户待触达</div>
+            <div class="list-meta"><span class="tag tag-blue">我的清单</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <a class="list-item" href="manager-roadshow-apply-list.html" style="padding:12px 0;border-top:1px solid var(--border)">
+          <div class="list-icon" style="background:var(--purple-bg)">🎤</div>
+          <div class="list-content">
+            <div class="list-title">路演申请与执行</div>
+            <div class="list-desc">1 单待配置 · 2 单待执行 · 可申请铁三角路演</div>
+            <div class="list-meta"><span class="tag tag-purple">路演管理</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 我的客户 -->
+    <div class="view" data-tab="customers">
+      <div class="filter-bar">
+        <button type="button" class="filter-chip active" data-filter="all">全部 12</button>
+        <button type="button" class="filter-chip" data-filter="wait">未触达 2</button>
+        <button type="button" class="filter-chip" data-filter="visit">已拜访 2</button>
+        <button type="button" class="filter-chip" data-filter="active">活跃 3</button>
+        <button type="button" class="filter-chip" data-filter="warn">预警 2</button>
+        <button type="button" class="filter-chip" data-filter="signed">已签约 2</button>
+        <button type="button" class="filter-chip" data-filter="none">暂无意向 1</button>
+      </div>
+
+      <div data-filter-list>
+        <div class="card" style="padding:0 14px" data-status="wait">
+          <div class="list-item" data-goto="page-detail" data-title="华南智造科技" data-subtitle="一户一表">
+            <div class="list-content">
+              <div class="list-title">华南智造科技有限公司</div>
+              <div class="list-desc">新开户 · 06-20 · 待首次拜访 · 已逾期 3 天</div>
+              <div class="list-meta"><span class="tag tag-blue">未触达</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="wait">
+          <div class="list-item" data-goto="page-detail" data-title="海珠物流" data-subtitle="一户一表">
+            <div class="list-content">
+              <div class="list-title">海珠物流有限公司</div>
+              <div class="list-desc">新开户 · 06-22 · 计划本周拜访</div>
+              <div class="list-meta"><span class="tag tag-blue">未触达</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="visit">
+          <div class="list-item" data-goto="page-detail-visit" data-title="星辰传媒" data-subtitle="已拜访">
+            <div class="list-content">
+              <div class="list-title">星辰传媒有限公司</div>
+              <div class="list-desc">已拜访 1 次 · 待意向确认 · 周五路演</div>
+              <div class="list-meta"><span class="tag tag-orange">已拜访</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="visit">
+          <div class="list-item" data-goto="page-detail-visit" data-title="金鼎精密制造" data-subtitle="已拜访">
+            <div class="list-content">
+              <div class="list-title">金鼎精密制造有限公司</div>
+              <div class="list-desc">已路演 · 待二次跟进 · 上次 06-18</div>
+              <div class="list-meta"><span class="tag tag-orange">已拜访</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="active">
+          <div class="list-item" data-goto="page-detail-active" data-title="粤食餐饮管理" data-subtitle="活跃客户">
+            <div class="list-content">
+              <div class="list-title">粤食餐饮管理有限公司</div>
+              <div class="list-desc">薪福宝 2 模块 · 代发 86 笔/月</div>
+              <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="active">
+          <div class="list-item" data-goto="page-detail-active" data-title="宏达建设集团" data-subtitle="活跃客户">
+            <div class="list-content">
+              <div class="list-title">宏达建设集团有限公司</div>
+              <div class="list-desc">代发活跃 · 薪福宝 4 模块 · 上次跟进 06-18</div>
+              <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="active">
+          <div class="list-item" data-goto="page-detail-active" data-title="锦程商旅" data-subtitle="活跃客户">
+            <div class="list-content">
+              <div class="list-title">锦程商旅服务有限公司</div>
+              <div class="list-desc">薪福宝 5 模块 · 代发 120 笔/月 · 网银活跃</div>
+              <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="warn">
+          <div class="list-item" data-goto="page-detail-warn" data-title="美家家居" data-subtitle="预警">
+            <div class="list-content">
+              <div class="list-title">美家家居有限公司</div>
+              <div class="list-desc">网银 30 天未登录 · 使用率下降</div>
+              <div class="list-meta"><span class="tag tag-red">预警</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="warn">
+          <div class="list-item" data-goto="page-detail-warn" data-title="优鲜连锁超市" data-subtitle="预警">
+            <div class="list-content">
+              <div class="list-title">优鲜连锁超市有限公司</div>
+              <div class="list-desc">薪福宝 15 天未登录 · 代发笔数骤降</div>
+              <div class="list-meta"><span class="tag tag-red">预警</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="signed">
+          <div class="list-item" data-goto="page-detail-signed" data-title="绿源环保科技" data-subtitle="已签约">
+            <div class="list-content">
+              <div class="list-title">绿源环保科技有限公司</div>
+              <div class="list-desc">已签约薪福宝+代发 · 明日路演 · 代发待激活</div>
+              <div class="list-meta"><span class="tag tag-orange">已签约</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="signed">
+          <div class="list-item" data-goto="page-detail-signed" data-title="博远软件科技" data-subtitle="已签约">
+            <div class="list-content">
+              <div class="list-title">博远软件科技有限公司</div>
+              <div class="list-desc">已签约薪福宝+银信通 · 代发未激活</div>
+              <div class="list-meta"><span class="tag tag-orange">已签约</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+        <div class="card" style="padding:0 14px" data-status="none">
+          <div class="list-item" data-goto="page-detail-none" data-title="恒通贸易" data-subtitle="暂无意向">
+            <div class="list-content">
+              <div class="list-title">恒通贸易有限公司</div>
+              <div class="list-desc">暂无意向 · 已复盘 · 下月再访</div>
+              <div class="list-meta"><span class="tag tag-gray">暂无意向</span></div>
+            </div>
+            <span class="list-arrow">›</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-empty" data-filter-empty style="display:none">当前筛选条件下暂无客户</div>
+    </div>
+
+    <!-- 跟进录入 -->
+    <div class="view" data-tab="follow">
+      <div class="tip-bar">跟进记录汇总 · 建议从「待办」分类进入对应事项后录入</div>
+
+      <div class="card">
+        <div class="card-title">最近录入</div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-24 · 粤食餐饮</div>
+            <div class="timeline-text">回访代发使用情况，客户反馈薪福宝界面友好，有意向开通流程审批模块。</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-20 · 绿源环保</div>
+            <div class="timeline-text">首次路演，对公介绍薪福宝、企业网银，零售推介代发+信用卡，科技解答 API 对接问题。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 消息 -->
+    <div class="view" data-tab="msg">
+      <div class="card">
+        <div class="list-item">
+          <div class="list-icon">💰</div>
+          <div class="list-content">
+            <div class="list-title">授信机会提醒</div>
+            <div class="list-desc">「粤食餐饮」流水达标，可申请授信</div>
+            <div class="list-meta"><span class="tag tag-purple">系统通知</span><span class="tag tag-gray">06-25</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-icon" style="background:var(--warning-bg)">📢</div>
+          <div class="list-content">
+            <div class="list-title">分行督导提醒</div>
+            <div class="list-desc">「华南智造」待触达已逾期，请尽快跟进</div>
+            <div class="list-meta"><span class="tag tag-orange">督导</span><span class="tag tag-gray">06-26</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-icon">🔄</div>
+          <div class="list-content">
+            <div class="list-title">系统自动回写</div>
+            <div class="list-desc">「粤食餐饮」代发笔数已更新：86 笔/月</div>
+            <div class="list-meta"><span class="tag tag-green">ECIF/核心</span><span class="tag tag-gray">06-24</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-icon" style="background:var(--danger-bg)">⚠️</div>
+          <div class="list-content">
+            <div class="list-title">预警触发通知</div>
+            <div class="list-desc">「美家家居」企业网银 30 天未登录，已纳入预警回访</div>
+            <div class="list-meta"><span class="tag tag-red">预警</span><span class="tag tag-gray">06-22</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-icon" style="background:var(--purple-bg)">🎤</div>
+          <div class="list-content">
+            <div class="list-title">路演协同提醒</div>
+            <div class="list-desc">「绿源环保」明日 10:00 铁三角路演，零售、科技已确认出席</div>
+            <div class="list-meta"><span class="tag tag-purple">协同</span><span class="tag tag-gray">06-27</span></div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="list-icon">📋</div>
+          <div class="list-content">
+            <div class="list-title">表册自动生成</div>
+            <div class="list-desc">「星辰传媒」新开户表册已分配至您名下，请安排首次拜访</div>
+            <div class="list-meta"><span class="tag tag-blue">系统通知</span><span class="tag tag-gray">06-20</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 子页面：清单下发（我的） -->
+    <div class="sub-view" id="page-manager-roster">
+      <span class="roster-scope-tag">客户经理视角 · 我的清单</span>
+      <div class="tip-bar">点击批次查看客户明细 · 客户项可进入一户一表详情</div>
+      <div class="roster-policy-box manager">
+        <strong>您的职责：</strong>作为<strong>管护客户经理</strong>，负责清单客户在待办中的触达、拜访与转化推进。<br>
+        <strong>管户调整：</strong>如需改派，由分行/总行操作；调整后您将收到通知，系统保留调整留痕。
+      </div>
+      <div class="card">
+        <div class="roster-stat-row">
+          <div class="roster-stat"><div class="num">3</div><div class="lbl">接收批次</div></div>
+          <div class="roster-stat"><div class="num">12</div><div class="lbl">在管客户</div></div>
+          <div class="roster-stat"><div class="num">4</div><div class="lbl">待触达</div></div>
+        </div>
+      </div>
+      <div class="section-label">接收批次</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item" data-goto="page-manager-roster-park" data-title="天河园区批量" data-subtitle="批次明细 · 5 户">
+          <div class="list-content">
+            <div class="list-title">天河园区批量开户清单</div>
+            <div class="list-desc">06-18 分配 · 5 户 · 待触达 2 · 已拜访 3</div>
+            <div class="list-meta"><span class="tag tag-purple">园区批量</span><span class="tag tag-orange">待跟进 2</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-manager-roster-new" data-title="新开户增量" data-subtitle="批次明细 · 2 户">
+          <div class="list-content">
+            <div class="list-title">6月新开户增量清单</div>
+            <div class="list-desc">持续注入 · 2 户 · 华南智造、星辰传媒</div>
+            <div class="list-meta"><span class="tag tag-orange">增量注入</span><span class="tag tag-red">1 户逾期</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-manager-roster-stock" data-title="存量薪福宝" data-subtitle="批次明细 · 5 户">
+          <div class="list-content">
+            <div class="list-title">6月存量薪福宝清单（我的份额）</div>
+            <div class="list-desc">06-01 分配 · 5 户 · 触达 100% · 活跃 3 户</div>
+            <div class="list-meta"><span class="tag tag-blue">存量清单</span><span class="tag tag-green">已完成触达</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 批次明细：天河园区批量 -->
+    <div class="sub-view" id="page-manager-roster-park">
+      <span class="roster-scope-tag">批次明细 · 我的客户</span>
+      <div class="card">
+        <div class="roster-batch-head">
+          <div>
+            <div class="roster-batch-title">天河园区批量开户清单</div>
+            <div class="roster-batch-meta">批次号 R202606-PARK-GZ-TJ · 06-18 14:30 分配至我</div>
+          </div>
+          <span class="tag tag-purple">园区批量</span>
+        </div>
+        <div class="roster-flow">
+          <span class="roster-flow-step done">总行下发</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">分行接收</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">06-18 分配至我</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step">触达 3/5</span>
+        </div>
+        <div class="field-row"><span class="field-label">管户人</span><span class="field-value">张经理（我）· 负责待办推进</span></div>
+        <div class="field-row"><span class="field-label">分配方式</span><span class="field-value">中支按网点归属自动分配</span></div>
+      </div>
+      <div class="section-label">本批次客户（5 户）</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item" data-goto="page-detail" data-title="华南智造科技" data-subtitle="待触达 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">华南智造科技有限公司</div>
+            <div class="list-desc">待触达 · 06-20 注入 · 计划跟进已逾期</div>
+            <div class="list-meta"><span class="tag tag-red">待触达</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-detail" data-title="海珠物流" data-subtitle="待触达 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">海珠物流有限公司</div>
+            <div class="list-desc">待触达 · 06-22 注入 · 计划本周拜访</div>
+            <div class="list-meta"><span class="tag tag-blue">待触达</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-detail" data-title="星辰传媒" data-subtitle="已拜访 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">星辰传媒有限公司</div>
+            <div class="list-desc">已拜访 · 06-26 首次跟进 · 待路演</div>
+            <div class="list-meta"><span class="tag tag-orange">已拜访</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-detail" data-title="金鼎精密制造" data-subtitle="已拜访 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">金鼎精密制造有限公司</div>
+            <div class="list-desc">已拜访 · 06-18 路演 · 待二次跟进</div>
+            <div class="list-meta"><span class="tag tag-orange">已拜访</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-detail-signed" data-title="绿源环保科技" data-subtitle="已签约 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">绿源环保科技有限公司</div>
+            <div class="list-desc">已签约 · 薪福宝+代发 · 明日路演 · 代发待激活</div>
+            <div class="list-meta"><span class="tag tag-blue">已签约</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 批次明细：新开户增量 -->
+    <div class="sub-view" id="page-manager-roster-new">
+      <span class="roster-scope-tag">批次明细 · 我的客户</span>
+      <div class="card">
+        <div class="roster-batch-head">
+          <div>
+            <div class="roster-batch-title">6月新开户增量清单</div>
+            <div class="roster-batch-meta">批次号 R202606-NEW · 持续注入 · 累计 2 户至我</div>
+          </div>
+          <span class="tag tag-orange">增量注入</span>
+        </div>
+        <div class="roster-flow">
+          <span class="roster-flow-step done">开户识别</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">CRM 自动注入</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">分行分配至我</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step">触达 1/2</span>
+        </div>
+        <div class="field-row"><span class="field-label">识别来源</span><span class="field-value">开户系统 · 广企通条件自动识别</span></div>
+        <div class="field-row"><span class="field-label">分配时效</span><span class="field-value">T+1 分配至管护客户经理</span></div>
+      </div>
+      <div class="section-label">本批次客户（2 户）</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item" data-goto="page-detail" data-title="华南智造科技" data-subtitle="待触达 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">华南智造科技有限公司</div>
+            <div class="list-desc">06-20 注入 · 待首次拜访 · 计划跟进已逾期</div>
+            <div class="list-meta"><span class="tag tag-red">待触达</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-detail" data-title="星辰传媒" data-subtitle="已拜访 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">星辰传媒有限公司</div>
+            <div class="list-desc">06-24 注入 · 已首次拜访 · 周五路演</div>
+            <div class="list-meta"><span class="tag tag-orange">已拜访</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 批次明细：存量薪福宝 -->
+    <div class="sub-view" id="page-manager-roster-stock">
+      <span class="roster-scope-tag">批次明细 · 我的客户</span>
+      <div class="card">
+        <div class="roster-batch-head">
+          <div>
+            <div class="roster-batch-title">6月存量薪福宝清单（我的份额）</div>
+            <div class="roster-batch-meta">批次号 R202606-STOCK-TJ · 06-01 分配 · 5 户至我</div>
+          </div>
+          <span class="tag tag-blue">存量清单</span>
+        </div>
+        <div class="roster-flow">
+          <span class="roster-flow-step done">总行推送</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">分行接收</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">06-01 分配至我</span>
+          <span class="roster-flow-arrow">→</span>
+          <span class="roster-flow-step done">触达 5/5</span>
+        </div>
+        <div class="field-row"><span class="field-label">清单来源</span><span class="field-value">ECIF · 已开通薪福宝存量客户</span></div>
+        <div class="field-row"><span class="field-label">活跃户</span><span class="field-value">3 户 · 2 户预警待回访</span></div>
+      </div>
+      <div class="section-label">本批次客户（5 户）</div>
+      <div class="card" style="padding:0 14px">
+        <div class="list-item" data-goto="page-detail-active" data-title="粤食餐饮" data-subtitle="活跃使用 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">粤食餐饮管理有限公司</div>
+            <div class="list-desc">薪福宝 2 模块 · 代发 86 笔/月 · 活跃</div>
+            <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-detail-active" data-title="宏达建设集团" data-subtitle="活跃使用 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">宏达建设集团有限公司</div>
+            <div class="list-desc">代发活跃 · 薪福宝 4 模块 · 上次跟进 06-18</div>
+            <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-detail-active" data-title="锦程商旅" data-subtitle="活跃使用 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">锦程商旅服务有限公司</div>
+            <div class="list-desc">薪福宝 5 模块 · 代发 120 笔/月 · 网银活跃</div>
+            <div class="list-meta"><span class="tag tag-green">活跃使用</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-detail-warn" data-title="美家家居" data-subtitle="预警 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">美家家居有限公司</div>
+            <div class="list-desc">网银 30 天未登录 · 代发较上月下降</div>
+            <div class="list-meta"><span class="tag tag-red">预警</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+        <div class="list-item" data-goto="page-detail-warn" data-title="优鲜连锁" data-subtitle="预警 · 客户详情">
+          <div class="list-content">
+            <div class="list-title">优鲜连锁超市有限公司</div>
+            <div class="list-desc">薪福宝 15 天未登录 · 代发笔数骤降</div>
+            <div class="list-meta"><span class="tag tag-red">预警</span></div>
+          </div>
+          <span class="list-arrow">›</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 子页面：一户一表详情（待触达客户） -->
+    <div class="sub-view" id="page-detail">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+          <div>
+            <div style="font-size:17px;font-weight:600">华南智造科技有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA5XXXXX · 制造业</div>
+          </div>
+          <span class="tag tag-blue">待触达</span>
+        </div>
+        <div class="field-row"><span class="field-label">客户来源</span><span class="field-value">新开户 · 薪福宝条件</span></div>
+        <div class="field-row"><span class="field-label">清单批次</span><span class="field-value">6月新开户增量 · 06-20 分配</span></div>
+        <div class="field-row"><span class="field-label">管户人</span><span class="field-value">张经理（我）</span></div>
+        <div class="field-row"><span class="field-label">表册生成</span><span class="field-value">2026-06-20 自动</span></div>
+        <div class="field-row"><span class="field-label">归属网点</span><span class="field-value">天河支行</span></div>
+        <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value" style="color:var(--text-muted)">暂无</span></div>
+        <div class="field-row"><span class="field-label">计划跟进</span><span class="field-value" style="color:var(--danger)">06-24（已逾期）</span></div>
+      </div>
+
+      <div class="section-label">行内产品使用</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-empty">
+          客户尚未签约行内产品，暂无使用回流数据<br>
+          <span style="font-size:12px">签约后将按<strong>本客户</strong>已开通的薪福宝、代发、企业网银、银信通、红棉理财、资金监管等产品自动展示使用情况</span>
+        </div>
+      </div>
+
+      <div class="section-label">跟进记录</div>
+      <div class="card">
+        <p style="font-size:13px;color:var(--text-muted);text-align:center;padding:12px 0">暂无跟进记录，请完成首次拜访后录入</p>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-header">✨ 下次拜访建议</div>
+        <ul>
+          <li>了解企业用工规模与代发需求，判断是否适合薪福宝+代发方案</li>
+          <li>介绍薪福宝人事、代发等模块，收集信息化痛点</li>
+          <li>如客户意向明确，协调零售、科技安排铁三角路演</li>
+        </ul>
+      </div>
+
+      <button class="btn btn-primary" type="button" data-goto="page-follow-form" data-title="录入跟进" data-subtitle="华南智造科技">录入本次拜访</button>
+      <a class="btn btn-outline" href="manager-roadshow-apply.html" style="margin-top:8px">申请铁三角路演</a>
+    </div>
+
+    <!-- 子页面：活跃客户详情 -->
+    <div class="sub-view" id="page-detail-active">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+          <div>
+            <div style="font-size:17px;font-weight:600">粤食餐饮管理有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA9YYYYY · 餐饮服务业</div>
+          </div>
+          <span class="tag tag-green">活跃使用</span>
+        </div>
+        <div class="field-row"><span class="field-label">客户来源</span><span class="field-value">存量 · 广企通客户</span></div>
+        <div class="field-row"><span class="field-label">签约产品</span><span class="field-value">薪福宝+代发+网银+银信通+红棉理财</span></div>
+        <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value">06-24</span></div>
+        <div class="field-row"><span class="field-label">下次计划</span><span class="field-value">07-08 · 模块推广</span></div>
+      </div>
+
+      <div class="section-label">已签约产品使用情况（自动回流）</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-head">
+          <span class="product-usage-customer">粤食餐饮管理有限公司</span>
+          <span class="tag tag-green">已签约 5 项</span>
+        </div>
+        <div class="product-usage-block">
+          <div class="product-usage-name">薪福宝</div>
+          <div class="usage-grid">
+            <div class="usage-item"><div class="usage-icon">👥</div><div class="usage-name">组织人事</div><div class="usage-status on">使用中</div></div>
+            <div class="usage-item off"><div class="usage-icon">📋</div><div class="usage-name">流程审批</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item"><div class="usage-icon">📅</div><div class="usage-name">假期考勤</div><div class="usage-status on">使用中</div></div>
+            <div class="usage-item off"><div class="usage-icon">💰</div><div class="usage-name">薪酬个税</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item off"><div class="usage-icon">🧾</div><div class="usage-name">费控报销</div><div class="usage-status off">未开通</div></div>
+          </div>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">代发</span>
+          <span class="value">86 笔/月 · 近 3 月稳定</span>
+          <span class="sync-tag">核心 · 06-24</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">企业网银</span>
+          <span class="value">近 7 日登录 3 次</span>
+          <span class="sync-tag">ECIF · 06-26</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">银信通</span>
+          <span class="value">已开通 · 账户变动通知正常</span>
+          <span class="sync-tag">ECIF · 06-26</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">红棉理财</span>
+          <span class="value">持有 2 款 · 余额 180 万</span>
+          <span class="sync-tag">ECIF · 06-25</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">资金监管</span>
+          <span class="value" style="color:var(--text-muted)">未签约</span>
+          <span class="sync-tag">—</span>
+        </div>
+        <p class="product-usage-note">针对<strong>本客户</strong>已签约产品，由薪福宝、核心系统、ECIF 等业务系统自动回写至一户一表</p>
+      </div>
+
+      <div class="section-label">路演记录（铁三角）</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">05-15 · 首次路演 · 已转化</div>
+            <div class="timeline-text">
+              <strong>对公</strong>：薪福宝、企业网银<br>
+              <strong>零售</strong>：代发工资、员工信用卡<br>
+              <strong>科技</strong>：薪福宝部署与培训
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-label">跟进时间线</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-24</div>
+            <div class="timeline-text">回访代发情况，客户满意。意向了解流程审批模块，约定下次演示。</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-01</div>
+            <div class="timeline-text">首笔代发成功，系统自动更新转化状态。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-header">✨ 下次跟进建议</div>
+        <ul>
+          <li>演示薪福宝流程审批/费控报销模块，提升使用深度</li>
+          <li>客户流水稳定，可初步沟通授信方案</li>
+        </ul>
+      </div>
+
+      <button class="btn btn-primary" type="button" data-goto="page-follow-form" data-title="录入跟进" data-subtitle="粤食餐饮">录入回访</button>
+    </div>
+
+    <!-- 子页面：预警客户（已签约） -->
+    <div class="sub-view" id="page-detail-warn">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+          <div>
+            <div style="font-size:17px;font-weight:600">美家家居有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA7ZZZZ · 家居零售</div>
+          </div>
+          <span class="tag tag-red">预警</span>
+        </div>
+        <div class="field-row"><span class="field-label">签约产品</span><span class="field-value">薪福宝+代发+网银+银信通+资金监管</span></div>
+        <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value">05-28</span></div>
+        <div class="field-row"><span class="field-label">预警原因</span><span class="field-value" style="color:var(--danger)">企业网银 30 天未登录</span></div>
+      </div>
+
+      <div class="section-label">已签约产品使用情况（自动回流）</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-head">
+          <span class="product-usage-customer">美家家居有限公司</span>
+          <span class="tag tag-orange">已签约 5 项</span>
+        </div>
+        <div class="product-usage-block">
+          <div class="product-usage-name">薪福宝</div>
+          <div class="usage-grid">
+            <div class="usage-item"><div class="usage-icon">👥</div><div class="usage-name">组织人事</div><div class="usage-status on">使用中</div></div>
+            <div class="usage-item off"><div class="usage-icon">📋</div><div class="usage-name">流程审批</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item off"><div class="usage-icon">📅</div><div class="usage-name">假期考勤</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item off"><div class="usage-icon">💰</div><div class="usage-name">薪酬个税</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item off"><div class="usage-icon">🧾</div><div class="usage-name">费控报销</div><div class="usage-status off">未开通</div></div>
+          </div>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">代发</span>
+          <span class="value">42 笔/月 · 较上月下降</span>
+          <span class="sync-tag">核心 · 06-20</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">企业网银</span>
+          <span class="value warn">30 天未登录</span>
+          <span class="sync-tag">ECIF · 06-26</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">银信通</span>
+          <span class="value">已开通 · 通知正常</span>
+          <span class="sync-tag">ECIF · 06-26</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">红棉理财</span>
+          <span class="value" style="color:var(--text-muted)">未签约</span>
+          <span class="sync-tag">—</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">资金监管</span>
+          <span class="value">已签约 · 监管账户 1 户</span>
+          <span class="sync-tag">ECIF · 06-18</span>
+        </div>
+        <p class="product-usage-note">针对<strong>本客户</strong>已签约产品自动回流 · 网银活跃度下降已触发预警</p>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-header">✨ 下次跟进建议</div>
+        <ul>
+          <li>回访企业网银停用原因，确认是否更换结算渠道</li>
+          <li>结合代发笔数下降，评估客户经营变化与流失风险</li>
+        </ul>
+      </div>
+
+      <button class="btn btn-primary" type="button" data-goto="page-follow-form" data-title="录入跟进" data-subtitle="美家家居">录入回访记录</button>
+    </div>
+
+    <!-- 子页面：已签约待提升 -->
+    <div class="sub-view" id="page-detail-signed">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+          <div>
+            <div style="font-size:17px;font-weight:600">绿源环保科技有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA6WWWW · 环保科技</div>
+          </div>
+          <span class="tag tag-orange">已签约</span>
+        </div>
+        <div class="field-row"><span class="field-label">签约产品</span><span class="field-value">薪福宝+代发+银信通</span></div>
+        <div class="field-row"><span class="field-label">签约日期</span><span class="field-value">2026-06-18</span></div>
+        <div class="field-row"><span class="field-label">下次安排</span><span class="field-value">明日铁三角路演</span></div>
+      </div>
+
+      <div class="section-label">已签约产品使用情况（自动回流）</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-head">
+          <span class="product-usage-customer">绿源环保科技有限公司</span>
+          <span class="tag tag-blue">已签约 3 项</span>
+        </div>
+        <div class="product-usage-block">
+          <div class="product-usage-name">薪福宝</div>
+          <div class="usage-grid">
+            <div class="usage-item off"><div class="usage-icon">👥</div><div class="usage-name">组织人事</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item off"><div class="usage-icon">📋</div><div class="usage-name">流程审批</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item off"><div class="usage-icon">📅</div><div class="usage-name">假期考勤</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item off"><div class="usage-icon">💰</div><div class="usage-name">薪酬个税</div><div class="usage-status off">未开通</div></div>
+            <div class="usage-item off"><div class="usage-icon">🧾</div><div class="usage-name">费控报销</div><div class="usage-status off">未开通</div></div>
+          </div>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">代发</span>
+          <span class="value warn">签约后尚未发生</span>
+          <span class="sync-tag">核心 · 06-26</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">银信通</span>
+          <span class="value">已开通 · 待绑定手机号</span>
+          <span class="sync-tag">ECIF · 06-18</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">红棉理财</span>
+          <span class="value" style="color:var(--text-muted)">未签约</span>
+          <span class="sync-tag">—</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">资金监管</span>
+          <span class="value" style="color:var(--text-muted)">未签约</span>
+          <span class="sync-tag">—</span>
+        </div>
+        <p class="product-usage-note">针对<strong>本客户</strong>已签约产品 · 薪福宝已签约待路演开通，代发未激活，银信通已自动回写，建议路演后完成部署并推动首笔代发</p>
+      </div>
+
+      <button class="btn btn-primary" type="button" data-goto="page-roadshow" data-title="铁三角路演" data-subtitle="绿源环保科技">录入路演记录</button>
+    </div>
+
+    <!-- 子页面：已拜访客户 -->
+    <div class="sub-view" id="page-detail-visit">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+          <div>
+            <div style="font-size:17px;font-weight:600">星辰传媒有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA8AAAAA · 广告传媒</div>
+          </div>
+          <span class="tag tag-orange">已拜访</span>
+        </div>
+        <div class="field-row"><span class="field-label">客户来源</span><span class="field-value">新开户 · 广企通推荐</span></div>
+        <div class="field-row"><span class="field-label">跟踪状态</span><span class="field-value">已拜访 · 待意向确认</span></div>
+        <div class="field-row"><span class="field-label">已推介产品</span><span class="field-value">薪福宝、代发</span></div>
+        <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value">06-26</span></div>
+        <div class="field-row"><span class="field-label">下次计划</span><span class="field-value" style="color:var(--blue-700)">06-28（周五）铁三角路演</span></div>
+      </div>
+      <div class="section-label">行内产品使用（部分回流）</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-head">
+          <span class="product-usage-customer">星辰传媒有限公司</span>
+          <span class="tag tag-blue">试用中 1 项</span>
+        </div>
+        <div class="product-usage-row">
+          <span class="label">代发</span>
+          <span class="value">试用 1 笔 · 06-25 首笔试发</span>
+          <span class="sync-tag">核心 · 06-26</span>
+        </div>
+        <p class="product-usage-note">客户尚未正式签约，代发试发数据已由核心系统自动回写</p>
+      </div>
+      <div class="section-label">跟进时间线</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-26</div>
+            <div class="timeline-text">首次拜访，推介薪福宝+代发。客户对代发较感兴趣，已安排 1 笔试发。</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="button" data-goto="page-follow-form" data-title="录入跟进" data-subtitle="星辰传媒">录入跟进</button>
+    </div>
+
+    <!-- 子页面：暂无意向客户 -->
+    <div class="sub-view" id="page-detail-none">
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+          <div>
+            <div style="font-size:17px;font-weight:600">恒通贸易有限公司</div>
+            <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA3BBBBB · 进出口贸易</div>
+          </div>
+          <span class="tag tag-gray">暂无意向</span>
+        </div>
+        <div class="field-row"><span class="field-label">跟踪状态</span><span class="field-value">暂无意向 · 已复盘</span></div>
+        <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value">06-15 · 复盘录入</span></div>
+        <div class="field-row"><span class="field-label">下次计划</span><span class="field-value">07-15 · 下月例行回访</span></div>
+      </div>
+      <div class="section-label">行内产品使用</div>
+      <div class="card product-usage-card">
+        <div class="product-usage-empty">客户尚未签约行内产品 · 复盘结论：与竞品绑定，短期内转化可能性较低</div>
+      </div>
+      <div class="section-label">复盘记录</div>
+      <div class="card">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <div class="timeline-date">06-15 · 复盘录入</div>
+            <div class="timeline-text">代发已与竞品合作满 2 年，薪福宝与现有 HR 系统重叠，维持关系下月再访。</div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="button" data-goto="page-follow-form" data-title="录入跟进" data-subtitle="恒通贸易">录入回访</button>
+    </div>
+
+    <!-- 子页面：录入跟进 -->
+    <div class="sub-view" id="page-follow-form">
+      <div class="card">
+        <div class="card-title">拜访跟进录入</div>
+
+        <div class="form-section">
+          <label class="form-label">客户名称</label>
+          <input type="text" class="form-input" value="华南智造科技有限公司" readonly>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">跟踪状态</label>
+          <select class="form-select" id="follow-status">
+            <option>待触达</option>
+            <option selected>已拜访</option>
+            <option>暂无意向</option>
+            <option>已签约</option>
+          </select>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">拜访类型</label>
+          <div class="chip-group" data-single data-summary="visitType">
+            <button type="button" class="option-chip active" data-value="首次拜访">首次拜访</button>
+            <button type="button" class="option-chip" data-value="回访跟进">回访跟进</button>
+            <button type="button" class="option-chip" data-value="铁三角协同">铁三角协同</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">企业规模</label>
+          <div class="chip-group" data-single data-summary="scale">
+            <button type="button" class="option-chip" data-value="50人以下">50人以下</button>
+            <button type="button" class="option-chip active" data-value="50-200人">50-200人</button>
+            <button type="button" class="option-chip" data-value="200-500人">200-500人</button>
+            <button type="button" class="option-chip" data-value="500人以上">500人以上</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">业务意向 <span class="form-label-hint">· 关注产品 · 可多选</span></label>
+          <div class="chip-group" data-summary="needs">
+            <button type="button" class="option-chip active" data-value="代发">代发</button>
+            <button type="button" class="option-chip active" data-value="薪福宝">薪福宝</button>
+            <button type="button" class="option-chip" data-value="企业网银">企业网银</button>
+            <button type="button" class="option-chip" data-value="银企直连">银企直连</button>
+            <button type="button" class="option-chip" data-value="授信咨询">授信咨询</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">客户反馈 <span class="form-label-hint">· 可多选</span></label>
+          <div class="chip-group" data-summary="feedback">
+            <button type="button" class="option-chip active" data-value="考虑中">考虑中</button>
+            <button type="button" class="option-chip" data-value="意向明确">意向明确</button>
+            <button type="button" class="option-chip" data-value="需进一步演示">需进一步演示</button>
+            <button type="button" class="option-chip" data-value="价格敏感">价格敏感</button>
+            <button type="button" class="option-chip" data-value="竞品绑定">竞品绑定</button>
+            <button type="button" class="option-chip" data-value="暂无意向">暂无意向</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">已推介产品 <span class="form-label-hint">· 可多选</span></label>
+          <div class="chip-group" data-summary="products">
+            <button type="button" class="option-chip active" data-value="薪福宝">薪福宝</button>
+            <button type="button" class="option-chip" data-value="代发">代发</button>
+            <button type="button" class="option-chip" data-value="企业网银">企业网银</button>
+            <button type="button" class="option-chip" data-value="银企直连">银企直连</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">下次跟进动作</label>
+          <div class="chip-group" data-single data-summary="nextAction">
+            <button type="button" class="option-chip active" data-value="安排路演">安排路演</button>
+            <button type="button" class="option-chip" data-value="产品演示">产品演示</button>
+            <button type="button" class="option-chip" data-value="意向确认">意向确认</button>
+            <button type="button" class="option-chip" data-value="例行回访">例行回访</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">下次跟进日期</label>
+          <input type="date" class="form-input" value="2026-07-02">
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">补充说明 <span class="form-label-hint">· 选填</span></label>
+          <textarea class="form-textarea" rows="2" data-follow-note="extra" placeholder="如有特殊情况，简要补充一句即可…"></textarea>
+        </div>
+
+        <div class="form-section demand-section demand-section--readonly">
+          <label class="form-label demand-toggle-label">
+            <input type="checkbox" class="demand-toggle" aria-label="填写客户需求（功能诉求）">
+            <span>客户需求（功能诉求） <span class="form-label-hint">· 选填</span></span>
+          </label>
+          <p class="demand-readonly-hint">勾选后可填写，涉及系统功能提升的诉求将自动归集至需求池</p>
+          <div class="demand-fields">
+            <p class="demand-pool-hint">涉及系统功能提升的诉求将<strong>自动归集至需求池</strong>，分行中支、总行可查阅并推动产品优化</p>
+            <label class="form-label form-label-sub">涉及产品/系统</label>
+            <div class="chip-group" data-summary="demandSystem">
+              <button type="button" class="option-chip" data-value="薪福宝">薪福宝</button>
+              <button type="button" class="option-chip" data-value="企业网银">企业网银</button>
+              <button type="button" class="option-chip" data-value="代发系统">代发系统</button>
+              <button type="button" class="option-chip" data-value="一户一表/CRM">一户一表/CRM</button>
+            </div>
+            <label class="form-label form-label-sub">功能诉求类型</label>
+            <div class="chip-group" data-summary="featureDemands">
+              <button type="button" class="option-chip" data-value="流程审批优化">流程审批优化</button>
+              <button type="button" class="option-chip" data-value="假期考勤联动">假期考勤联动</button>
+              <button type="button" class="option-chip" data-value="移动端体验">移动端体验</button>
+              <button type="button" class="option-chip" data-value="OA/HR系统对接">OA/HR系统对接</button>
+              <button type="button" class="option-chip" data-value="批量操作简化">批量操作简化</button>
+              <button type="button" class="option-chip" data-value="报表导出增强">报表导出增强</button>
+              <button type="button" class="option-chip" data-value="消息通知增强">消息通知增强</button>
+              <button type="button" class="option-chip" data-value="界面易用性">界面易用性</button>
+            </div>
+            <label class="form-label form-label-sub">诉求描述</label>
+            <textarea class="form-textarea form-textarea-sm" rows="2" data-follow-note="featureDemand" readonly placeholder="记录客户原话或具体使用场景，如「审批层级太多，希望按天数自动路由」…"></textarea>
+          </div>
+        </div>
+
+        <div class="summary-preview">
+          <div class="summary-preview-label">自动生成摘要</div>
+          <div id="follow-summary">首次拜访，企业规模 50-200 人；业务意向：代发、薪福宝；客户考虑中；已推介薪福宝；下次安排路演。</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="button" onclick="alert('Demo：跟进记录已保存；功能诉求已同步至需求池')">保存并同步 CRM</button>
+    </div>
+
+    <!-- 子页面：路演录入 -->
+    <div class="sub-view" id="page-roadshow">
+      <div class="card roadshow-form">
+        <div class="card-title">铁三角路演记录</div>
+        <p class="form-hint">点选预填内容快速组合，各栏可补充自定义说明</p>
+
+        <div class="form-section">
+          <label class="form-label">参与角色 <span class="form-label-hint">· 可多选</span></label>
+          <div class="chip-group" data-roadshow="roles">
+            <button type="button" class="option-chip active" data-value="对公 · 我">对公 · 我</button>
+            <button type="button" class="option-chip active" data-value="零售 · 李经理">零售 · 李经理</button>
+            <button type="button" class="option-chip active" data-value="科技 · 王工">科技 · 王工</button>
+          </div>
+        </div>
+
+        <div class="form-section roadshow-role-block">
+          <label class="form-label form-label-role corp">对公营销产品 <span class="form-label-hint">· 可多选</span></label>
+          <div class="chip-group" data-roadshow="corpProducts">
+            <button type="button" class="option-chip active" data-value="薪福宝">薪福宝</button>
+            <button type="button" class="option-chip active" data-value="企业网银">企业网银</button>
+            <button type="button" class="option-chip" data-value="银企直连">银企直连</button>
+            <button type="button" class="option-chip" data-value="资金监管">资金监管</button>
+            <button type="button" class="option-chip" data-value="红棉理财">红棉理财</button>
+            <button type="button" class="option-chip" data-value="授信配套">授信配套</button>
+          </div>
+          <textarea class="form-textarea form-textarea-sm" rows="2" data-roadshow-note="corpProducts" placeholder="对公侧补充说明，如重点演示模块、客户关注点…"></textarea>
+        </div>
+
+        <div class="form-section roadshow-role-block">
+          <label class="form-label form-label-role retail">零售营销产品 <span class="form-label-hint">· 可多选</span></label>
+          <div class="chip-group" data-roadshow="retailProducts">
+            <button type="button" class="option-chip active" data-value="代发工资">代发工资</button>
+            <button type="button" class="option-chip" data-value="员工信用卡">员工信用卡</button>
+            <button type="button" class="option-chip" data-value="个人养老金">个人养老金</button>
+            <button type="button" class="option-chip" data-value="员工贷款">员工贷款</button>
+            <button type="button" class="option-chip" data-value="代发+理财组合">代发+理财组合</button>
+          </div>
+          <textarea class="form-textarea form-textarea-sm" rows="2" data-roadshow-note="retailProducts" placeholder="零售侧补充说明，如代发规模、员工权益诉求…"></textarea>
+        </div>
+
+        <div class="form-section roadshow-role-block">
+          <label class="form-label form-label-role tech">科技解答问题 <span class="form-label-hint">· 可多选</span></label>
+          <div class="chip-group" data-roadshow="techTopics">
+            <button type="button" class="option-chip active" data-value="薪福宝部署与培训">薪福宝部署与培训</button>
+            <button type="button" class="option-chip active" data-value="API 对接方案">API 对接方案</button>
+            <button type="button" class="option-chip" data-value="数据安全合规">数据安全合规</button>
+            <button type="button" class="option-chip" data-value="系统迁移方案">系统迁移方案</button>
+            <button type="button" class="option-chip" data-value="与现有 HR/OA 对接">与现有 HR/OA 对接</button>
+            <button type="button" class="option-chip" data-value="代发接口联调">代发接口联调</button>
+          </div>
+          <textarea class="form-textarea form-textarea-sm" rows="2" data-roadshow-note="techTopics" placeholder="科技侧补充说明，如待确认事项、实施周期…"></textarea>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">客户现场反馈 <span class="form-label-hint">· 可多选</span></label>
+          <div class="chip-group" data-roadshow="feedback">
+            <button type="button" class="option-chip active" data-value="考虑中">考虑中</button>
+            <button type="button" class="option-chip" data-value="意向明确">意向明确</button>
+            <button type="button" class="option-chip" data-value="需进一步演示">需进一步演示</button>
+            <button type="button" class="option-chip" data-value="价格敏感">价格敏感</button>
+            <button type="button" class="option-chip" data-value="要求优惠方案">要求优惠方案</button>
+            <button type="button" class="option-chip" data-value="待内部决策">待内部决策</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">转化结果</label>
+          <div class="chip-group" data-single data-roadshow="result">
+            <button type="button" class="option-chip active" data-value="待跟进">待跟进</button>
+            <button type="button" class="option-chip" data-value="已签约">已签约</button>
+            <button type="button" class="option-chip" data-value="需二次路演">需二次路演</button>
+            <button type="button" class="option-chip" data-value="暂无意向 · 需复盘">暂无意向 · 需复盘</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">下次跟进动作</label>
+          <div class="chip-group" data-single data-roadshow="nextAction">
+            <button type="button" class="option-chip active" data-value="推动首笔代发">推动首笔代发</button>
+            <button type="button" class="option-chip" data-value="薪福宝开通培训">薪福宝开通培训</button>
+            <button type="button" class="option-chip" data-value="安排二次路演">安排二次路演</button>
+            <button type="button" class="option-chip" data-value="报价方案跟进">报价方案跟进</button>
+            <button type="button" class="option-chip" data-value="复盘归档">复盘归档</button>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="form-label">整体补充说明 <span class="form-label-hint">· 选填</span></label>
+          <textarea class="form-textarea" rows="2" data-roadshow-note="extra" placeholder="其他需记录的情况，如参会人员、现场异议、约定事项…"></textarea>
+        </div>
+
+        <div class="summary-preview">
+          <div class="summary-preview-label">自动生成摘要（同步至一户一表）</div>
+          <div id="roadshow-summary">参与：对公 · 我、零售 · 李经理、科技 · 王工。<strong>对公</strong>：薪福宝、企业网银。<strong>零售</strong>：代发工资。<strong>科技</strong>：薪福宝部署与培训、API 对接方案。客户考虑中；转化：待跟进；下次推动首笔代发。</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="button" onclick="alert('Demo：路演记录已同步至一户一表')">保存路演记录</button>
+    </div>
+  </div>
+
+  <nav class="tab-bar">
+    <button class="tab-item active" data-tab="home"><span class="icon">🏠</span>待办</button>
+    <button class="tab-item" data-tab="customers"><span class="icon">👥</span>客户</button>
+    <button class="tab-item" data-tab="follow"><span class="icon">✏️</span>跟进</button>
+    <button class="tab-item has-badge" data-tab="msg"><span class="dot"></span><span class="icon">🔔</span>消息</button>
+  </nav>
+</div>
+<script src="common.js"></script>
+<script>
+  initApp({ defaultTab: 'home' });
+  initOptionChips();
+  initDemandSection();
+  updateFollowSummary();
+  updateRoadshowSummary();
+  document.querySelector('#page-follow-form .form-textarea')?.addEventListener('input', updateFollowSummary);
+  document.querySelectorAll('#page-follow-form [data-follow-note], .follow-form [data-follow-note]').forEach(el => {
+    el.addEventListener('input', updateFollowSummary);
+  });
+  document.querySelectorAll('#page-roadshow [data-roadshow-note]').forEach(el => {
+    el.addEventListener('input', updateRoadshowSummary);
+  });
+</script>
+</body>
+</html>

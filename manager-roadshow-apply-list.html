@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>我的路演申请 · 广企通</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 客户经理</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+      <a href="manager.html" class="header-back show" id="apply-list-back" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">我的路演申请</div>
+        <div class="app-subtitle">申请进度 · 资源配置 · 按计划执行</div>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="tip-bar">「待执行」与待办「铁三角路演」数量一致 · 配置完成后请按计划开展路演并录入记录</div>
+
+    <div class="filter-bar">
+      <button class="filter-chip active" data-filter="all">全部</button>
+      <button class="filter-chip" data-filter="pending">待配置</button>
+      <button class="filter-chip" data-filter="ready">待执行</button>
+      <button class="filter-chip" data-filter="done">已完成</button>
+    </div>
+
+    <div data-filter-list>
+      <div class="card" style="padding:0 14px" data-status="pending">
+        <a class="list-item" href="manager-roadshow-apply-detail.html">
+          <div class="list-content">
+            <div class="list-title">华南智造科技有限公司</div>
+            <div class="list-desc">预约 07-05 14:00 · 上门现场 · 06-29 提交</div>
+            <div class="list-meta">
+              <span class="tag tag-orange">待分行配置</span>
+              <span class="tag tag-gray">薪福宝+代发</span>
+            </div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+
+      <div class="card" style="padding:0 14px" data-status="ready">
+        <a class="list-item" href="manager-roadshow-plan.html">
+          <div class="list-content">
+            <div class="list-title">星辰传媒有限公司</div>
+            <div class="list-desc">确定 07-02 15:00 · 零售+科技已确认 · 06-28 配置完成</div>
+            <div class="list-meta">
+              <span class="tag tag-purple">待执行路演</span>
+              <span class="tag tag-green">资源已到位</span>
+            </div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+
+      <div class="card" style="padding:0 14px" data-status="ready">
+        <a class="list-item" href="manager-roadshow-plan-signed.html">
+          <div class="list-content">
+            <div class="list-title">绿源环保科技有限公司</div>
+            <div class="list-desc">确定 06-30 10:00 · 零售+科技已确认 · 06-27 配置完成</div>
+            <div class="list-meta">
+              <span class="tag tag-purple">待执行路演</span>
+              <span class="tag tag-green">资源已到位</span>
+            </div>
+          </div>
+          <span class="list-arrow">›</span>
+        </a>
+      </div>
+    </div>
+
+    <p data-filter-empty hidden style="text-align:center;color:var(--text-muted);font-size:13px;padding:24px 0">暂无该状态的申请</p>
+
+    <a class="btn btn-primary" href="manager-roadshow-apply.html" style="margin-top:12px">+ 新建路演申请</a>
+  </div>
+  <nav class="tab-bar tab-bar-links">
+    <a class="tab-item" href="manager-todo.html"><span class="icon">🏠</span>待办</a>
+    <a class="tab-item" href="manager-customers.html"><span class="icon">👥</span>客户</a>
+    <a class="tab-item active" href="manager-roadshow-apply-list.html"><span class="icon">🎤</span>路演</a>
+    <a class="tab-item has-badge" href="manager-messages.html"><span class="dot"></span><span class="icon">🔔</span>消息</a>
+  </nav>
+</div>
+<script src="common.js"></script>
+<script>
+  if (new URLSearchParams(location.search).get('from') === 'todo') {
+    document.getElementById('apply-list-back').href = 'manager-todo.html';
+  }
+  initStandalonePage();
+</script>
+</body>
+</html>

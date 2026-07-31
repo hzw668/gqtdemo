@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>美家家居 · 客户明细</title>
+  <link rel="stylesheet" href="common.css">
+</head>
+<body>
+<div class="phone-shell standalone-page">
+  <div class="status-bar"><span>9:41</span><span>广信 CRM · 客户经理</span><span>100%</span></div>
+  <header class="app-header compact">
+    <div class="header-row">
+      <a href="manager-todo-warn.html" class="header-back show" aria-label="返回">‹</a>
+      <div class="header-title-wrap">
+        <div class="app-title">美家家居</div>
+        <div class="app-subtitle">预警 · 客户明细</div>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px">
+        <div>
+          <div style="font-size:17px;font-weight:600">美家家居有限公司</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-top:4px">91440101MA7ZZZZ · 家居零售</div>
+        </div>
+        <span class="tag tag-red">预警</span>
+      </div>
+      <div class="field-row"><span class="field-label">签约产品</span><span class="field-value">薪福宝+代发+网银+银信通+资金监管</span></div>
+      <div class="field-row"><span class="field-label">上次跟进</span><span class="field-value">05-28</span></div>
+      <div class="field-row"><span class="field-label">预警原因</span><span class="field-value" style="color:var(--danger)">企业网银 30 天未登录</span></div>
+    </div>
+
+    <div class="section-label">已签约产品使用情况（自动回流）</div>
+    <div class="card product-usage-card">
+      <div class="product-usage-head">
+        <span class="product-usage-customer">美家家居有限公司</span>
+        <span class="tag tag-orange">已签约 5 项</span>
+      </div>
+      <div class="product-usage-block">
+        <div class="product-usage-name">薪福宝</div>
+        <div class="usage-grid">
+          <div class="usage-item"><div class="usage-icon">👥</div><div class="usage-name">组织人事</div><div class="usage-status on">使用中</div></div>
+          <div class="usage-item off"><div class="usage-icon">📋</div><div class="usage-name">流程审批</div><div class="usage-status off">未开通</div></div>
+          <div class="usage-item off"><div class="usage-icon">📅</div><div class="usage-name">假期考勤</div><div class="usage-status off">未开通</div></div>
+          <div class="usage-item off"><div class="usage-icon">💰</div><div class="usage-name">薪酬个税</div><div class="usage-status off">未开通</div></div>
+          <div class="usage-item off"><div class="usage-icon">🧾</div><div class="usage-name">费控报销</div><div class="usage-status off">未开通</div></div>
+        </div>
+      </div>
+      <div class="product-usage-row">
+        <span class="label">代发</span>
+        <span class="value">42 笔/月 · 较上月下降</span>
+        <span class="sync-tag">核心 · 06-20</span>
+      </div>
+      <div class="product-usage-row">
+        <span class="label">企业网银</span>
+        <span class="value warn">30 天未登录</span>
+        <span class="sync-tag">ECIF · 06-26</span>
+      </div>
+      <div class="product-usage-row">
+        <span class="label">银信通</span>
+        <span class="value">已开通 · 通知正常</span>
+        <span class="sync-tag">ECIF · 06-26</span>
+      </div>
+      <div class="product-usage-row">
+        <span class="label">红棉理财</span>
+        <span class="value" style="color:var(--text-muted)">未签约</span>
+        <span class="sync-tag">—</span>
+      </div>
+      <div class="product-usage-row">
+        <span class="label">资金监管</span>
+        <span class="value">已签约 · 监管账户 1 户</span>
+        <span class="sync-tag">ECIF · 06-18</span>
+      </div>
+      <p class="product-usage-note">针对<strong>本客户</strong>已签约产品自动回流 · 网银活跃度下降已触发预警</p>
+    </div>
+
+    <div class="ai-card">
+      <div class="ai-card-header">✨ 下次跟进建议</div>
+      <ul>
+        <li>回访企业网银停用原因，确认是否更换结算渠道</li>
+        <li>结合代发笔数下降，评估客户经营变化与流失风险</li>
+      </ul>
+    </div>
+
+    <a class="btn btn-primary" href="manager-follow.html">录入回访记录</a>
+  </div>
+</div>
+</body>
+</html>
