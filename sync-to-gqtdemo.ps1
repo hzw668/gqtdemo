@@ -7,6 +7,12 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+try {
+    [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
+    $OutputEncoding = [System.Text.UTF8Encoding]::new()
+    $null = cmd /c "chcp 65001 >nul"
+} catch {
+}
 
 function Exit-WithError {
     param([string]$Text, [int]$Code = 1)
@@ -72,10 +78,18 @@ if (-not $staged) {
     exit 0
 }
 
+$beforeHead = (git rev-parse HEAD).Trim()
 # Invoke commit via argument array
 & git @("commit", "-m", $Message)
-if ($LASTEXITCODE -ne 0) {
+$commitExit = $LASTEXITCODE
+$afterHead = (git rev-parse HEAD).Trim()
+$remainingStaged = git diff --cached --name-only
+$commitOk = ($commitExit -eq 0) -or (($afterHead -ne $beforeHead) -and (-not $remainingStaged))
+if (-not $commitOk) {
     Exit-WithError "本地提交失败。"
+}
+if ($commitExit -ne 0) {
+    Write-Warning "提交已成功（HEAD=$afterHead），但 git 退出码为 $commitExit（常见于控制台输出写入失败）。继续推送。"
 }
 
 git push $Remote $Branch
